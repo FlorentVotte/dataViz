@@ -16,6 +16,13 @@
   <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <style>
+
+      canvas {
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+      }
+
     html {
       height: 100%;
     }
@@ -265,9 +272,11 @@
     }
     .main section .page_container .btns a{
       text-align: center;
+
     }
     .main section.page2 {
-      background: #555557;
+      background: rgba(159, 42, 62, 0.44);
+
     }
 
     .main section.page2 .page_container {
@@ -277,9 +286,9 @@
     .main section.page2 h1 {
       text-align: center;
       padding: 0;
-      margin-bottom: 15px;
+      margin-bottom: -50px;
       font-size: 50px;
-      letter-spacing: -1px;
+
       color: white;
     }
     .main section.page2 h2 {
@@ -386,10 +395,82 @@
   	    </div>
       </section>
 
+
+          <script src="js/Chart.bundle.js"></script>
+          <script src="js/utils.js"></script>
 		<section class="page2">
 		  <div class="page_container">
-		  <h1>First Slide</h1>
-		  <h2>Blablabla</h2>
+
+              <div id="container" style="width: 100%;">
+                  <h2>Number of dead and missing</h2>
+                  <canvas id="canvas"></canvas>
+              </div>
+              <script>
+                  var color = Chart.helpers.color;
+                  var dataArray = {
+                      labels: ["February 2014", "March 2014", "April 2014", "May 2014", "June 2014",
+                          "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",
+                          "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015",
+                          "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015",
+                          "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016",
+                          "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
+                          "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
+                          "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
+                      datasets: [{
+                          label: 'number of dead and missing',
+                          backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                          borderColor: window.chartColors.red,
+                          borderWidth: 1,
+                          data: [96, 209, 1001, 794, 902, 402, 459, 98, 321, 58, 27,
+                              702, 242,700, 452, 879, 297, 179, 345, 1309, 554, 413, 209,
+                              689, 930, 741, 527, 222, 447, 612, 1364, 739, 564, 502, 595,
+                              147, 360, 414, 404, 404, 810, 753, 360, 432, 388, 542]
+                      }]
+
+                  };
+                  var barChartData = {
+                      labels: ["January 2014"],
+                      datasets: [{
+                          label: 'number of dead and missing',
+                          backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                          borderColor: window.chartColors.red,
+                          borderWidth: 1,
+                          data: [918]
+                      }]
+
+                  };
+
+
+                  window.onload = function() {
+                      var ctx = document.getElementById("canvas").getContext("2d");
+                      window.myBar = new Chart(ctx, {
+                          type: 'line',
+                          data: barChartData,
+                          options: {
+                              responsive: true,
+                              legend: {
+                                  display: false,
+                                  position: 'bottom'
+                              },
+                              title: {
+                                  display: false,
+                                  text: 'Migrants'
+                              }
+                          }
+                      });
+                      for (var index = 0; 0 < dataArray.labels.length; ++index) {
+                          barChartData.labels.push(dataArray.labels.shift());
+                          barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
+                          window.myBar.update();
+                      }
+
+                  };
+
+
+
+
+              </script>
+
 
 		  </div>
       </section>
