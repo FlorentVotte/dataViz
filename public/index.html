@@ -430,11 +430,18 @@
 
                   };
                   var barChartData = {
-                      labels: ["January 2014"],
+                      labels: ["January 2014", "February 2014", "March 2014", "April 2014", "May 2014", "June 2014",
+                          "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",
+                          "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015",
+                          "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015",
+                          "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016",
+                          "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
+                          "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
+                          "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
                       datasets: [{
                           label: 'number of dead and missing',
                           backgroundColor: color("#181661").alpha(0.6).rgbString(),
-                          borderColor: color("#181661").alpha(0.6).rgbString(),
+                          borderColor: color("#3c3f41").alpha(0.6).rgbString(),
                           borderWidth: 2,
                           data: [918]
                       }]
@@ -479,9 +486,8 @@
                   };
 
                   var graph = window.setInterval(function(){
-                      if ((dataArray.labels.length>0) & (window.location.hash==="#2")){
+                      if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#2")){
 
-                          barChartData.labels.push(dataArray.labels.shift());
                           barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
                           window.myBar.update();
                       }
