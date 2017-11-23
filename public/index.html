@@ -42,10 +42,18 @@
             </div>
         </section>
 
+        <section class="page2">
+            <div class="page_container">
+                <h1>Second Slide</h1>
+                <h2>Blablabla</h2>
+
+
+            </div>
+        </section>
 
         <script src="js/Chart.bundle.js"></script>
         <script src="js/utils.js"></script>
-        <section class="page2">
+        <section class="page3">
             <div class="page_container">
 
                 <div id="container" style="width: 100%;">
@@ -138,7 +146,7 @@
                     };
 
                     var graph = window.setInterval(function(){
-                        if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#2")){
+                        if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#3")){
 
                             barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
                             window.myBar.update();
