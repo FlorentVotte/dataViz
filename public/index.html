@@ -44,9 +44,38 @@
 
         <section class="page2">
             <div class="page_container">
-                <h1>Second Slide</h1>
-                <h2>Blablabla</h2>
 
+
+                <h1 id="Titre1">Titre 1</h1>
+
+                <h1 id="Titre2">Titre 2</h1>
+
+
+                <script>
+                    var good = 0;
+                    document.getElementById("Titre1").style.transform = "transform: translate(-100%, 0%);";
+                    document.getElementById("Titre2").style.transform = "transform: translate(-100%, 0%);";
+                    var graph = window.setInterval(function(){
+                        if ((good < 4) & (window.location.hash==="#2")){
+
+                            if(good=0){
+                                document.getElementById("Titre1").style.transform = "transform: translate(100%, 0%);";
+                            }
+                            else if (good =1){
+                                document.getElementById("Titre1").style.transform = "transform: translate(-100%, 0%);";
+                                document.getElementById("Titre2").style.transform = "transform: translate(100%, 0%);";
+
+                            }
+
+                            good = 1+ good;
+
+                        }
+                        else if (good = 4){
+                            clearInterval(graph);
+                        }
+                }, 1000);
+
+                </script>
 
             </div>
         </section>
