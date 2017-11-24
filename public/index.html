@@ -1,209 +1,304 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="utf-8">
-    <title>Missing Migrants Projet</title>
-    <meta name="title" content="Missing Migrants Projet" />
-    <meta name="description" content="Data Vizualisation of the Missing Migrants Projet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Background video - fullPage.js</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen backgrounds." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+    <meta name="Resource-type" content="Document" />
+    <script src="js/Chart.bundle.js"></script>
+    <script src="js/utils.js"></script>
 
-    <link rel="shortcut icon" id="favicon" href="images/favicon.png">
-    <meta name="author" content="Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte">
 
-    <link href='css/open.css' rel='stylesheet' type='text/css'>
-    <link href='css/pacifico.css' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
-    <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="css/style.css">
-    <script>
-        $(document).ready(function(){
-            $(".main").onepage_scroll({
-                sectionContainer: "section",
-                updateURL: true,
-                animationTime: 800,
-                responsiveFallback: 600,
-                loop: true,
-                direction: "vertical"
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <style>
 
+        /* Style for our header texts
+        * --------------------------------------- */
+        h1{
+            font-size: 5em;
+            font-family: 'Merriweather', serif;
+            color: #fff;
+            margin:0;
+            padding:0;
+        }
+        h2{
+            font-size: 3em;
+            font-family: 'Merriweather', serif;
+            color: #fff;
+            margin:0;
+            padding:0;
+        }
+        h3{
+            font-size: 2em;
+            font-family: 'Merriweather', serif;
+            color: #343434;
+            margin:0;
+            padding:0;
+        }
+        h4{
+            font-size: 1em;
+            font-family: 'Merriweather', serif;
+            color: black;
+            margin:0;
+            padding:0;
+        }
+
+        /* Centered texts in each section
+        * --------------------------------------- */
+        .section{
+            text-align:center;
+            overflow: hidden;
+        }
+
+        #myVideo{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top:0;
+            right:0;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-color: black; /* in case the video doesn't fit the whole page*/
+            background-image: /* our video */;
+            background-position: center center;
+            background-size: contain;
+            object-fit: cover; /*cover video background */
+            z-index:3;
+        }
+
+        #section1 h1 {
+            font-size: 3em;
+            color: black;
+        }
+
+
+        /* Layer with position absolute in order to have it over the video
+        * --------------------------------------- */
+        #section3 .layer{
+            position: absolute;
+            z-index: 4;
+            width: 100%;
+            left: 0;
+            top: 43%;
+
+            /*
+            * Preventing flicker on some browsers
+            * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+            */
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+        /*solves problem with overflowing video in Mac with Chrome */
+        #section3{
+            overflow: hidden;
+        }
+
+
+        /* Bottom menu
+        * --------------------------------------- */
+        #infoMenu li a {
+            color: #fff;
+        }
+
+
+        /* Hiding video controls
+        * See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+        * --------------------------------------- */
+        video::-webkit-media-controls {
+            display:none !important;
+        }
+
+    </style>
+
+    <!--[if IE]>
+    <script type="text/javascript">
+        var console = { log: function() {} };
+    </script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="js/scrolloverflow.js"></script>
+
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/examples.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                verticalCentered: true,
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+
+
+                onLeave: function(index, nextIndex, direction){},
+                afterLoad: function(anchorLink, index){},
+                afterRender: function(){},
+                afterResize: function(){},
+                afterResponsive: function(isResponsive){},
+                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+                onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
             });
         });
     </script>
+
 </head>
 <body>
-<div class="wrapper">
-    <div class="main">
-
-        <section class="page1">
-            <div class="page_container">
-                <h1>Missing Migrant Project</h1>
-                <h2>Project of data vizualisation at Télécom ParisTech</h2>
-                <p class="credit">Created by Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte</p>
-            </div>
-        </section>
-
-        <section class="page2">
-            <div class="page_container">
 
 
-                <h1 id="Titre1">Titre 1</h1>
 
-                <h1 id="Titre2">Titre 2</h1>
+<div id="fullpage">
+    <div class="section " id="section0">
+        <h1>Missing Migrant Project</h1>
+        <br>
+        <h3>Project of data vizualisation at Télécom ParisTech</h3>
+        <br>
+        <h4>Created by Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte</h4>
+    </div>
+    <div class="section" id="section1">
 
+        <h1>Number of dead and missing</h1>
 
-                <script>
-                    var good = 0;
-                    document.getElementById("Titre1").style.transform = "transform: translate(-100%, 0%);";
-                    document.getElementById("Titre2").style.transform = "transform: translate(-100%, 0%);";
-                    var graph = window.setInterval(function(){
-                        if ((good < 4) & (window.location.hash==="#2")){
+        <canvas id="canvas"></canvas>
 
-                            if(good=0){
-                                document.getElementById("Titre1").style.transform = "transform: translate(100%, 0%);";
-                            }
-                            else if (good =1){
-                                document.getElementById("Titre1").style.transform = "transform: translate(-100%, 0%);";
-                                document.getElementById("Titre2").style.transform = "transform: translate(100%, 0%);";
+        <script>
+            var color = Chart.helpers.color;
+            var dataArray = {
+                labels: ["February 2014", "March 2014", "April 2014", "May 2014", "June 2014",
+                    "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",
+                    "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015",
+                    "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015",
+                    "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016",
+                    "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
+                    "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
+                    "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
+                datasets: [{
+                    label: 'Total',
+                    backgroundColor: color(window.chartColors.black).alpha(0.7).rgbString(),
+                    borderColor: window.chartColors.cyan,
+                    borderWidth: 1,
+                    data: [24, 10, 50, 329, 318, 789, 616, 813, 126, 22, 99,
+                        82, 345, 61, 1222, 96, 33, 230, 699, 269, 421, 107, 217,
+                        370, 55, 324, 630, 1178, 389, 226, 62, 80, 437, 718, 386,
+                        254, 231, 308, 312, 613, 547, 132, 151, 108, 168, 135]
+                },
+                {
+                    label: 'Central route',
+                    backgroundColor: color(window.chartColors.black).alpha(0).rgbString(),
+                    borderColor: window.chartColors.red,
+                    borderWidth: 1,
+                    data: [9, 1, 50, 329, 314, 764, 616, 813, 118, 18, 58,
+                        67, 336, 53, 1208, 95, 5, 206, 652, 76, 163, 8, 8,
+                        90, 7, 258, 611, 1130, 388, 208, 40, 53, 431, 703, 374,
+                        225, 217, 290, 279, 611, 537, 68, 143, 102, 160, 118]
+                }]
 
-                            }
+            };
+            var barChartData = {
+                labels: ["January 2014", "February 2014", "March 2014", "April 2014", "May 2014", "June 2014",
+                    "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",
+                    "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015",
+                    "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015",
+                    "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016",
+                    "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
+                    "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
+                    "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
+                datasets: [{
+                    label: 'Total',
+                    backgroundColor: color("#181661").alpha(0.4).rgbString(),
+                    borderColor: color("#3c3f41").alpha(1).rgbString(),
+                    borderWidth: 2,
+                    data: [12]
+                }, {label: 'Central route',
+                    borderColor: color("#c50021").alpha(1).rgbString(),
+                    borderWidth: 2,
+                    data: [0]}
+                ]
 
-                            good = 1+ good;
-
-                        }
-                        else if (good = 4){
-                            clearInterval(graph);
-                        }
-                }, 1000);
-
-                </script>
-
-            </div>
-        </section>
-
-        <script src="js/Chart.bundle.js"></script>
-        <script src="js/utils.js"></script>
-        <section class="page3">
-            <div class="page_container">
-
-                <div id="container" style="width: 100%;">
-                    <h2>Number of dead and missing</h2>
-                    <canvas id="canvas"></canvas>
-                </div>
-                <script>
-                    var color = Chart.helpers.color;
-                    var dataArray = {
-                        labels: ["February 2014", "March 2014", "April 2014", "May 2014", "June 2014",
-                            "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",
-                            "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015",
-                            "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015",
-                            "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016",
-                            "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
-                            "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
-                            "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
-                        datasets: [{
-                            label: 'number of dead and missing',
-                            backgroundColor: color(window.chartColors.black).alpha(0.7).rgbString(),
-                            borderColor: window.chartColors.cyan,
-                            borderWidth: 1,
-                            data: [96, 209, 1001, 794, 902, 402, 459, 98, 321, 58, 27,
-                                702, 242,700, 452, 879, 297, 179, 345, 1309, 554, 413, 209,
-                                689, 930, 741, 527, 222, 447, 612, 1364, 739, 564, 502, 595,
-                                147, 360, 414, 404, 404, 810, 753, 360, 432, 388, 542]
-                        }]
-
-                    };
-                    var barChartData = {
-                        labels: ["January 2014", "February 2014", "March 2014", "April 2014", "May 2014", "June 2014",
-                            "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",
-                            "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015",
-                            "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015",
-                            "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016",
-                            "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
-                            "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
-                            "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
-                        datasets: [{
-                            label: 'number of dead and missing',
-                            backgroundColor: color("#181661").alpha(0.6).rgbString(),
-                            borderColor: color("#3c3f41").alpha(0.6).rgbString(),
-                            borderWidth: 2,
-                            data: [918]
-                        }]
-
-                    };
+            };
 
 
-                    window.onload = function() {
-                        var ctx = document.getElementById("canvas").getContext("2d");
-                        window.myBar = new Chart(ctx, {
-                            type: 'line',
-                            data: barChartData,
-                            options: {
-                                responsive: true,
-                                legend: {
-                                    display: false,
-                                    position: 'bottom'
-                                },
-                                gridLines: {
-                                    display: false,
-                                    drawBorder: false,
-                                    drawOnChartArea: false,
-                                    drawTicks: false,
-                                },
+            window.onload = function() {
+                var ctx = document.getElementById("canvas").getContext("2d");
+                window.myBar = new Chart(ctx, {
+                    type: 'line',
+                    data: barChartData,
+                    options: {
+                        responsive: true,
+                        legend: {
+                            display: true,
+                            position: 'bottom'
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false,
+                            drawOnChartArea: false,
+                            drawTicks: false,
+                        },
 
-                                title: {
-                                    display: false,
-                                    text: 'Migrants'
-                                },
-                                scales: {
-                                    xAxes: [{
-                                        display: true,
-                                        scaleLabel: {
-                                            display: true,
-                                            labelString: 'Date'
-                                        }
-                                    }],
-                                    yAxes: [{
-                                        display: true,
-                                        scaleLabel: {
-                                            display: true,
-                                            labelString: 'Nb dead and missing'
-                                        }
-                                    }]
+                        title: {
+                            display: false,
+                            text: 'Migrants'
+                        },
+                        tooltips: {
+                            mode: 'index',
+                            intersect: true
+                        },
+                        scales: {
+                            xAxes: [{
+                                display: true,
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Date'
                                 }
-                            }
-                        });
-                    };
-
-                    var graph = window.setInterval(function(){
-                        if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#3")){
-
-                            barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
-                            window.myBar.update();
+                            }],
+                            yAxes: [{
+                                display: true,
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Nb dead and missing'
+                                }
+                            }]
                         }
-                        else if (!(dataArray.datasets[0].data.length>0)){
-                            clearInterval(graph);
+                    }
+                });
+            };
 
-                        }
-                    }, 100);
+            var graph = window.setInterval(function(){
+                if ((dataArray.datasets[0].data.length>0) ){
 
-                </script>
-            </div>
-        </section>
-        <section class="page3">
-            <div class="page_container">
-                <h1>Second Slide</h1>
-                <h2>Blablabla</h2>
+                    barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
+                    barChartData.datasets[1].data.push(dataArray.datasets[1].data.shift());
+                    window.myBar.update();
+                }
+                else if (!(dataArray.datasets[0].data.length>0)){
+                    clearInterval(graph);
 
-            </div>
-        </section>
+                }
+            }, 100);
 
-        <section class="page4">
-            <div class="page_container">
-                <h1>3th Slide</h1>
-                <h2>Blablabla</h2>
+        </script>
 
-            </div>
-        </section>
+
+    </div>
+    <div class="section" id="section2"><h1>Lovely images <br />for a lovely page</h1></div>
+
+    <div class="section" id="section3">
+        <video id="myVideo" loop muted data-autoplay>
+            <source src="images/flowers.mp4" type="video/mp4">
+            <source src="images/flowers.webm" type="video/webm">
+        </video>
+        <div class="layer">
+            <h1>Video de fond</h1>
+        </div>
     </div>
 </div>
 
