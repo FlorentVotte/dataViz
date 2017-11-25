@@ -78,6 +78,36 @@
             color: black;
         }
 
+        #section1 .layer{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 33%;
+
+            /*
+            * Preventing flicker on some browsers
+            * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+            */
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+        #section1 .image{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 13%;
+
+            /*
+            * Preventing flicker on some browsers
+            * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+            */
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+
 
         /* Layer with position absolute in order to have it over the video
         * --------------------------------------- */
@@ -137,16 +167,16 @@
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 verticalCentered: true,
-                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+                lockAnchors: false,
+                navigation: true,
+                navigationTooltips: ['Title', 'Family Journey','Migration', '', 'Mediterranean', 'Graph', 'Centrale Route Boat',
+                    'Easter Route Truck', 'Maps', 'History', 'Lampelousa', 'Datas', 'Goals', 'Thanks'],
+                showActiveTooltip: false,
 
 
-                onLeave: function(index, nextIndex, direction){},
-                afterLoad: function(anchorLink, index){},
-                afterRender: function(){},
-                afterResize: function(){},
-                afterResponsive: function(isResponsive){},
-                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-                onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+                anchors:['0','1', '2', '3', '4','5', '6', '7', '8', '9', '10', '11', '12', '13', '14','15', '16', '17'],
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE',
+                    '#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE'],
             });
         });
     </script>
@@ -164,8 +194,83 @@
         <br>
         <h4>Created by Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte</h4>
     </div>
-    <div class="section" id="section1">
 
+    <div class="section" id="section1">
+        <div id="titre1" class="layer">
+            <h1>This is  a GTGBBHHUIJ (adjectif?) family</h1>
+        </div>
+        <img id="family" src="images/family.png" alt="family" class="image">
+        <div id="titre2" class="layer">
+            <h3>They went on a journey</h3>
+        </div>
+        <div id="titre3" class="layer">
+            <h3>But 2 people were missing</h3>
+        </div>
+        <img id="missing" src="images/family_missing.png" alt="missing" class="image">
+
+
+        <script>
+            var index = 0;
+
+            document.getElementById("titre1").style.visibility = 'hidden';
+            document.getElementById("titre1").style.zIndex = '1';
+            document.getElementById("titre2").style.visibility = 'hidden';
+            document.getElementById("titre2").style.zIndex = '2';
+            document.getElementById("titre3").style.visibility = 'hidden';
+            document.getElementById("titre3").style.zIndex = '3';
+            document.getElementById("missing").style.visibility = 'hidden';
+
+            var annim = window.setInterval(function(){
+                if ((window.location.hash==="#1")){
+                    if (index==0){
+                        console.log("index = 0");
+                        document.getElementById("titre1").style.visibility = 'visible';
+                    }
+                    else if (index ==6){
+                        console.log("index = 1");
+                        document.getElementById("titre2").style.visibility = 'visible';
+                        document.getElementById("titre1").style.visibility = 'hidden';
+                    }
+                    else if (index ==12){
+                        console.log("index = 2");
+                        document.getElementById("titre3").style.visibility = 'visible';
+                        document.getElementById("titre2").style.visibility = 'hidden';
+                        document.getElementById("family").style.visibility = 'hidden';
+                        document.getElementById("missing").style.visibility = 'visible';
+                    }
+
+                    index ++;
+
+                }
+                else if (index > 20){
+
+                    clearInterval(annim);
+
+                }
+            }, 500);
+        </script>
+
+
+    </div>
+
+    <div class="section" id="section2">
+        <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+
+    <div class="section" id="section3">
+        <video id="myVideo" loop muted data-autoplay>
+            <source src="images/flowers.mp4" type="video/mp4">
+            <source src="images/flowers.webm" type="video/webm">
+        </video>
+        <div class="layer">
+            <h1>Video de fond</h1>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+
+    <div class="section" id="section5">
         <h1>Number of dead and missing</h1>
 
         <canvas id="canvas"></canvas>
@@ -191,16 +296,16 @@
                         370, 55, 324, 630, 1178, 389, 226, 62, 80, 437, 718, 386,
                         254, 231, 308, 312, 613, 547, 132, 151, 108, 168, 135]
                 },
-                {
-                    label: 'Central route',
-                    backgroundColor: color(window.chartColors.black).alpha(0).rgbString(),
-                    borderColor: window.chartColors.red,
-                    borderWidth: 1,
-                    data: [9, 1, 50, 329, 314, 764, 616, 813, 118, 18, 58,
-                        67, 336, 53, 1208, 95, 5, 206, 652, 76, 163, 8, 8,
-                        90, 7, 258, 611, 1130, 388, 208, 40, 53, 431, 703, 374,
-                        225, 217, 290, 279, 611, 537, 68, 143, 102, 160, 118]
-                }]
+                    {
+                        label: 'Central route',
+                        backgroundColor: color(window.chartColors.black).alpha(0).rgbString(),
+                        borderColor: window.chartColors.red,
+                        borderWidth: 1,
+                        data: [9, 1, 50, 329, 314, 764, 616, 813, 118, 18, 58,
+                            67, 336, 53, 1208, 95, 5, 206, 652, 76, 163, 8, 8,
+                            90, 7, 258, 611, 1130, 388, 208, 40, 53, 431, 703, 374,
+                            225, 217, 290, 279, 611, 537, 68, 143, 102, 160, 118]
+                    }]
 
             };
             var barChartData = {
@@ -274,7 +379,7 @@
             };
 
             var graph = window.setInterval(function(){
-                if ((dataArray.datasets[0].data.length>0) ){
+                if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#5") ){
 
                     barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
                     barChartData.datasets[1].data.push(dataArray.datasets[1].data.shift());
@@ -287,20 +392,42 @@
             }, 100);
 
         </script>
-
-
     </div>
-    <div class="section" id="section2"><h1>Lovely images <br />for a lovely page</h1></div>
 
-    <div class="section" id="section3">
-        <video id="myVideo" loop muted data-autoplay>
-            <source src="images/flowers.mp4" type="video/mp4">
-            <source src="images/flowers.webm" type="video/webm">
-        </video>
-        <div class="layer">
-            <h1>Video de fond</h1>
-        </div>
+    <div class="section" id="section6">
+        <h1>Lovely images <br />for a lovely page</h1>
     </div>
+
+    <div class="section" id="section7">
+        <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+
+    <div class="section" id="section8">
+        <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+
+    <div class="section" id="section9">
+        <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+
+    <div class="section" id="section10">
+        <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+
+    <div class="section" id="section11">
+        <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+
+    <div class="section" id="section12">
+        <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+
+    <div class="section" id="section13">
+        <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+
+
+
 </div>
 
 </body>
