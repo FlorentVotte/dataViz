@@ -250,9 +250,12 @@
             document.getElementById("titre3").style.zIndex = '3';
             document.getElementById("missing").style.visibility = 'hidden';
 
+
             var annim = window.setInterval(function(){
+
                 if ((window.location.hash==="#1")){
                     if (index==0){
+                        $.fn.fullpage.setMouseWheelScrolling(false);
                         console.log("index = 0");
                         document.getElementById("titre1").style.visibility = 'visible';
                     }
@@ -267,6 +270,7 @@
                         document.getElementById("titre2").style.visibility = 'hidden';
                         document.getElementById("family").style.visibility = 'hidden';
                         document.getElementById("missing").style.visibility = 'visible';
+                        $.fn.fullpage.setMouseWheelScrolling(true);
                     }
 
                     index ++;
