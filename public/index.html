@@ -13,6 +13,7 @@
     <script src="js/utils.js"></script>
 
 
+
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
@@ -139,6 +140,9 @@
         }
 
 
+
+
+
         /* Bottom menu
         * --------------------------------------- */
         #infoMenu li a {
@@ -177,6 +181,8 @@
 
 
 
+
+
     </style>
 
     <!--[if IE]>
@@ -188,8 +194,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-    <script type="text/javascript" src="js/scrolloverflow.js"></script>
 
+
+
+    <script type="text/javascript" src="js/scrolloverflow.js"></script>
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="js/examples.js"></script>
 
@@ -207,6 +215,7 @@
                 anchors:['0','1', '2', '3', '4','5', '6', '7', '8', '9', '10', '11', '12', '13', '14','15', '16', '17'],
                 sectionsColor: ['#7BAABE', '#7BAABE', '#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE',
                     '#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE','#7BAABE'],
+
             });
         });
     </script>
@@ -259,7 +268,7 @@
                         console.log("index = 0");
                         document.getElementById("titre1").style.visibility = 'visible';
                     }
-                    else if (index ==10){
+                    else if (index ==8){
                         console.log("index = 1");
                         document.getElementById("titre2").style.visibility = 'visible';
                         document.getElementById("titre1").style.visibility = 'hidden';
@@ -272,16 +281,16 @@
                         document.getElementById("missing").style.visibility = 'visible';
                         $.fn.fullpage.setMouseWheelScrolling(true);
                     }
-
                     index ++;
-
                 }
-                else if (index > 50){
-
+                else {
                     clearInterval(annim);
-
                 }
+
             }, 500);
+
+
+
         </script>
 
 
@@ -331,7 +340,7 @@
     </div>
 
     <div class="section" id="section5">
-        <h1>Number of dead and missing</h1>
+        <h2>Number of dead and missing</h2>
 
         <canvas id="canvas"></canvas>
 
@@ -384,6 +393,7 @@
                     borderWidth: 2,
                     data: [12]
                 }, {label: 'Central route',
+                    backgroundColor: color("#ffffff").alpha(0).rgbString(),
                     borderColor: color("#c50021").alpha(1).rgbString(),
                     borderWidth: 2,
                     data: [0]}
@@ -440,14 +450,12 @@
 
             var graph = window.setInterval(function(){
                 if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#5") ){
-
                     barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
                     barChartData.datasets[1].data.push(dataArray.datasets[1].data.shift());
                     window.myBar.update();
                 }
-                else if (!(dataArray.datasets[0].data.length>0)){
+                else if(!(dataArray.datasets[0].data.length>0)){
                     clearInterval(graph);
-
                 }
             }, 100);
 
@@ -455,15 +463,17 @@
     </div>
 
     <div class="section" id="section6">
-        <h1>Lovely images <br />for a lovely page</h1>
+        <h1>Centrale route<br />boat graph</h1>
     </div>
 
     <div class="section" id="section7">
-        <h1>Lovely images <br />for a lovely page</h1>
+        <h1>Eastern route<br />Truck graph</h1>
     </div>
 
     <div class="section" id="section8">
-        <h1>Lovely images <br />for a lovely page</h1>
+        <h1>Maps </h1>
+
+
     </div>
 
     <div class="section" id="section9">
@@ -483,7 +493,9 @@
     </div>
 
     <div class="section" id="section13">
-        <h1>Lovely images <br />for a lovely page</h1>
+        <h2>Special thanks to:</h2>
+        <br>
+        <h3>Samuel Huron</h3>
     </div>
 
 
