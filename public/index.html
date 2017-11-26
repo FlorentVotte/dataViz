@@ -179,6 +179,12 @@
             display:block;
         }
 
+        .graph {
+            position: relative;
+            left: 10%;
+            width: 80%;
+        }
+
 
 
 
@@ -341,8 +347,10 @@
 
     <div class="section" id="section5">
         <h2>Number of dead and missing</h2>
+        <div class="graph">
+            <canvas id="canvas"></canvas>
+        </div>
 
-        <canvas id="canvas"></canvas>
 
         <script>
             var color = Chart.helpers.color;
