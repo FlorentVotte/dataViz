@@ -18,38 +18,46 @@
 
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
     <style>
 
         /* Style for our header texts
         * --------------------------------------- */
         h1{
             font-size: 5em;
-            font-family: 'Merriweather', serif;
+            font-family: 'Libre Franklin', sans-serif;
             color: #fff;
             margin:0;
             padding:0;
         }
         h2{
             font-size: 3em;
-            font-family: 'Merriweather', serif;
+            font-family: 'Libre Franklin', sans-serif;
             color: #fff;
             margin:0;
             padding:0;
         }
         h3{
             font-size: 2em;
-            font-family: 'Merriweather', serif;
+            font-family: 'Libre Franklin', sans-serif;
             color: #343434;
             margin:0;
             padding:0;
         }
         h4{
             font-size: 1em;
-            font-family: 'Merriweather', serif;
+            font-family: 'Libre Franklin', sans-serif;
             color: black;
             margin:0;
             padding:0;
+        }
+        h5{
+            font-size: 40px;
+            font-family: 'Libre Franklin', sans-serif;
+            color: #fff;
+            font-weight: bold;
+            margin-left: 5%;
+            margin-right: 5%;
         }
 
         /* Centered texts in each section
@@ -204,6 +212,44 @@
             text-align:center;
             padding: 5%;
         }
+        #section10 h4 {
+            text-align: left;
+            padding-left: 5%;
+        }
+
+        #section5 p {
+            font-size: 20px;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            text-align: left;
+
+        }
+        #section5 h2 {
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 2%;
+            margin-top: 2%;
+        }
+
+        #section6 p {
+            font-size: 25px;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            text-align: left;
+        }
+
+        #section7 p {
+            font-size: 25px;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            text-align: left;
+        }
 
 
 
@@ -349,11 +395,16 @@
         <h1>Lovely images <br />for a lovely page</h1>
     </div>
 
-    <div class="section" id="section5">
-        <h2>Number of dead and missing</h2>
-        <div class="graph">
-            <canvas id="canvas"></canvas>
-        </div>
+    <<div class="section" id="section5">
+    <h5>Nowadays, travelling through the Mediterranean is the most dangerous path in the world for migrants</h5>
+    <p>For those migrants, mainly coming from Syria and the Middle East trying to reach Western Europe, there is a choice to make between two irregular migration routes : the Central or the Eastern route.</p>
+    <div class="graph">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <p>Despite the increase in migrant flows through the eastern Mediterranean since 2015, the central Mediterranean remains the more deadly route.
+        Let us take a look at the dangers facing migrants on each of those routes.</p>
+
         <script>
             var color = Chart.helpers.color;
             var dataArray = {
@@ -490,11 +541,14 @@
     </div>
 
     <div class="section" id="section6">
-        <h1>Centrale route<br />boat graph</h1>
+        <h5>First, let us focus on the Central Mediterranean route</h5>
+        <p> By taking the central route, migrants will have to travel on boats and face the most common cause of death in the mediterranean sea: <b>drowning</b>.</p>
+
     </div>
 
     <div class="section" id="section7">
-        <h1>Eastern route<br />Truck graph</h1>
+        <h5>The Eastern route, increasingly used by migrants since 2015, is a lot less dangerous.</h5>
+        <p>By taking the Eastern route, migrants cross from Turkey to Greece and face the most common cause of death on this path : <b>(INSERER LA CAUSE)</b></p>
     </div>
 
     <div class="section" id="section8">
@@ -648,19 +702,60 @@
     </div>
 
     <div class="section" id="section9">
-        <h1>Lovely images <br />for a lovely page</h1>
+        <h3>Now, let’s go back to the family we were following. <br />This tragic journey is unfortunately only one among many.</h3>
+
+        <img src="images/mig0.png" id="mig0" alt="mig0" class="image" height="60%">
+        <img src="images/mig1.png" id="mig1" alt="mig1" class="image" height="60%">
+        <img src="images/mig2.png" id="mig2" alt="mig2" class="image" height="60%">
+
+        <script>
+            var index = 0;
+
+            document.getElementById("mig1").style.visibility = 'hidden';
+            document.getElementById("mig2").style.visibility = 'hidden';
+
+
+            window.setInterval(function(){
+
+                if ((window.location.hash==="#1")){
+                    if (index==0){
+                        $.fn.fullpage.setMouseWheelScrolling(false);
+                    }
+                    else if (index ==8){
+                        document.getElementById("mig1").style.visibility = 'visible';
+                        document.getElementById("mig0").style.visibility = 'hidden';
+                    }
+                    else if (index ==20){
+                        document.getElementById("mig2").style.visibility = 'visible';
+                        document.getElementById("mig1").style.visibility = 'hidden';
+                        $.fn.fullpage.setMouseWheelScrolling(true);
+                    }
+                    index ++;
+                }
+            }, 400);
+        </script>
+
     </div>
 
     <div class="section" id="section10">
-        <h1>Lovely images <br />for a lovely page</h1>
+        <h4>A few months after they arrived at their final destination, the family got news from a friend they met during their migration: one of their missing relatives was dead.
+            <br />Some will never know what happened to their relatives. Others will receive a call.
+            <br/>Those are the migrants you daily hear about in the news
+            <br/>For example, the Lampedusa catastrophe, during which 368 people died in 2013, motivated the Missing Migrant Project. </h4>
     </div>
 
     <div class="section" id="section11">
-        <h1>Lovely images <br />for a lovely page</h1>
+        <h4>The stakes are high. There is a need to collect information from newspapers, aggregate data coming from thousands of voluntaries involved in the study of migrations flows or even in the rescue.
+            <br />This information is incredibly hard to collect and analyse, but things get done thanks to the work of thousands of UN workers, journalists, NGOs, migrants witnesses...</h4>
     </div>
 
     <div class="section" id="section12">
-        <h1>Lovely images <br />for a lovely page</h1>
+        <h3>Our goal is to make people realize the extent of the phenomenon in order to act. How can you act? </h3>
+        <h4><br /> <ul style="list-style-type:disc">
+            <li>As a citizen, you can engage in pushing for welcoming and integrating policies </li>
+            <li>As a policy maker, in taking further actions to protect and shelter migrants </li>
+            <li>Or just as a human being you can engage in helping migrants searching for asylum in your country</li>
+            </ul></h4>
     </div>
 
     <div class="section" id="section13">
