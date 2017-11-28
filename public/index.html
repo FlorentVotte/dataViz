@@ -118,6 +118,70 @@
             transform: translate3d(0,0,0);
         }
 
+        #section9 .image{
+            position: absolute;
+            height: 70%;
+            width: 80%;
+            left: 10%;
+            top: 30%;
+
+            /*
+            * Preventing flicker on some browsers
+            * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+            */
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+        #section9 #titre91 {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 10%;
+
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+        #section9 #titre92 {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 25%;
+
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+        #section9 #titre93 {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 25%;
+
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+        #section9 #titre94 {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 25%;
+
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+        
+        #section9 h4 {
+            color: #ffffff;
+            font-size: 1.5em;
+        }
+
+
+
         #section2 .text {
             margin-left: 10%;
             margin-right: 10%;
@@ -251,10 +315,6 @@
             text-align: left;
         }
 
-
-
-
-
     </style>
 
     <!--[if IE]>
@@ -298,7 +358,7 @@
 
 
 <div id="fullpage">
-    <div class="section " id="section0">
+    <div class="section" id="section0">
         <h1>Missing Migrant Project</h1>
         <br>
         <h3>Project of data vizualisation at Télécom ParisTech</h3>
@@ -391,6 +451,7 @@
             <h1>Video de fond</h1>
         </div>
     </div>
+
     <div class="section" id="section4">
         <h1>Lovely images <br />for a lovely page</h1>
     </div>
@@ -702,8 +763,18 @@
     </div>
 
     <div class="section" id="section9">
-        <h3>Now, let’s go back to the family we were following. <br />This tragic journey is unfortunately only one among many.</h3>
-
+        <div id="titre91" class="layer">
+            <h3>Now, let’s go back to the family we were following. <br />This tragic journey is unfortunately only one among many.</h3>
+        </div>
+        <div id="titre92" class="layer">
+            <h4>Prenons 100 migrants</h4>
+        </div>
+        <div id="titre93" class="layer">
+            <h4>20 seront portées disparus</h4>
+        </div>
+        <div id="titre94" class="layer">
+            <h4>19 trouverons la mort</h4>
+        </div>
         <img src="images/mig0.png" id="mig0" alt="mig0" class="image" height="60%">
         <img src="images/mig1.png" id="mig1" alt="mig1" class="image" height="60%">
         <img src="images/mig2.png" id="mig2" alt="mig2" class="image" height="60%">
@@ -713,21 +784,27 @@
 
             document.getElementById("mig1").style.visibility = 'hidden';
             document.getElementById("mig2").style.visibility = 'hidden';
+            document.getElementById("titre93").style.visibility = 'hidden';
+            document.getElementById("titre94").style.visibility = 'hidden';
 
 
             window.setInterval(function(){
 
-                if ((window.location.hash==="#1")){
+                if ((window.location.hash==="#9")){
                     if (index==0){
                         $.fn.fullpage.setMouseWheelScrolling(false);
                     }
-                    else if (index ==8){
+                    else if (index ==10){
                         document.getElementById("mig1").style.visibility = 'visible';
                         document.getElementById("mig0").style.visibility = 'hidden';
+                        document.getElementById("titre92").style.visibility = 'hidden';
+                        document.getElementById("titre93").style.visibility = 'visible';
                     }
                     else if (index ==20){
                         document.getElementById("mig2").style.visibility = 'visible';
                         document.getElementById("mig1").style.visibility = 'hidden';
+                        document.getElementById("titre93").style.visibility = 'hidden';
+                        document.getElementById("titre94").style.visibility = 'visible';
                         $.fn.fullpage.setMouseWheelScrolling(true);
                     }
                     index ++;
