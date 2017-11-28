@@ -1,6 +1,5 @@
->dataViz
-
-##Missing Migrant Project
+Missing Migrant Project
+=======================
 
 **Project of data vizualisation at Télécom ParisTech**
 
