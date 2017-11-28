@@ -780,7 +780,7 @@
         <img src="images/mig2.png" id="mig2" alt="mig2" class="image" height="60%">
 
         <script>
-            var index = 0;
+            var index2 = 0;
 
             document.getElementById("mig1").style.visibility = 'hidden';
             document.getElementById("mig2").style.visibility = 'hidden';
@@ -791,16 +791,16 @@
             window.setInterval(function(){
 
                 if ((window.location.hash==="#9")){
-                    if (index==0){
+                    if (index2==0){
                         $.fn.fullpage.setMouseWheelScrolling(false);
                     }
-                    else if (index ==10){
+                    else if (index2 ==10){
                         document.getElementById("mig1").style.visibility = 'visible';
                         document.getElementById("mig0").style.visibility = 'hidden';
                         document.getElementById("titre92").style.visibility = 'hidden';
                         document.getElementById("titre93").style.visibility = 'visible';
                     }
-                    else if (index ==20){
+                    else if (index2 ==20){
                         document.getElementById("mig2").style.visibility = 'visible';
                         document.getElementById("mig1").style.visibility = 'hidden';
                         document.getElementById("titre93").style.visibility = 'hidden';
