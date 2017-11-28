@@ -166,16 +166,15 @@
                 font-size: 20px;
                 margin-left: 5%;
                 margin-right: 5%;
-                margin-bottom: 2%;
+                margin-bottom: 1%;
                 margin-top: 2%;
                 text-align: left;
-
             }
-            #section5 h2 {
+            #section5 h5 {
                 margin-left: 5%;
                 margin-right: 5%;
-                margin-bottom: 2%;
-                margin-top: 2%;
+                margin-bottom: -1%;
+                margin-top: -2%;
             }
 
             #section6 p {
@@ -298,8 +297,9 @@
             }
             .graph {
                 position: relative;
-                left: 10%;
-                width: 80%;
+                left: 15%;
+                width: 70%;
+                margin-bottom: -2%;
             }
             .maps {
                 position: absolute;
@@ -422,148 +422,144 @@
         </div>
 
         <div class="section" id="section5">
-        <h5>Nowadays, travelling through the Mediterranean is the most dangerous path in the world for migrants</h5>
-        <p>For those migrants, mainly coming from Syria and the Middle East trying to reach Western Europe, there is a choice to make between two irregular migration routes : the Central or the Eastern route.</p>
-        <div class="graph">
-            <canvas id="canvas"></canvas>
-        </div>
-
-        <p>Despite the increase in migrant flows through the eastern Mediterranean since 2015, the central Mediterranean remains the more deadly route.
-            Let us take a look at the dangers facing migrants on each of those routes.</p>
+            <h5>Nowadays, travelling through the Mediterranean is the most dangerous path in the world for migrants</h5>
+            <p>For those migrants, mainly coming from Syria and the Middle East trying to reach Western Europe, there is a choice to make between two irregular migration routes : the Central or the Eastern route.</p>
+            <div class="graph">
+                <canvas id="canvas"></canvas>
+            </div>
+            <p>Despite the increase in migrant flows through the eastern Mediterranean since 2015, the central Mediterranean remains the more deadly route.
+                Let us take a look at the dangers facing migrants on each of those routes.</p>
 
             <script>
-                var color = Chart.helpers.color;
-                var dataArray = {
-                    labels: ["February 2014", "March 2014", "April 2014", "May 2014", "June 2014",
-                        "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",
-                        "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015",
-                        "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015",
-                        "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016",
-                        "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
-                        "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
-                        "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
-                    datasets: [{
-                        label: 'Total',
-                        backgroundColor: color(window.chartColors.black).alpha(0.7).rgbString(),
-                        borderColor: window.chartColors.cyan,
-                        borderWidth: 1,
-                        data: [24, 10, 50, 329, 318, 789, 616, 813, 126, 22, 99,
-                            82, 345, 61, 1222, 96, 33, 230, 699, 269, 421, 107, 217,
-                            370, 55, 324, 630, 1178, 389, 226, 62, 80, 437, 718, 386,
-                            254, 231, 308, 312, 613, 547, 132, 151, 108, 168, 135]
-                    },
-                        {
-                            label: 'Central route',
-                            backgroundColor: color(window.chartColors.black).alpha(0).rgbString(),
-                            borderColor: window.chartColors.red,
+                    var color = Chart.helpers.color;
+                    var dataArray = {
+                        labels: ["February 2014", "March 2014", "April 2014", "May 2014", "June 2014",
+                            "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",
+                            "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015",
+                            "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015",
+                            "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016",
+                            "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
+                            "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
+                            "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
+                        datasets: [{
+                            label: 'Total',
+                            backgroundColor: color(window.chartColors.black).alpha(0.7).rgbString(),
+                            borderColor: window.chartColors.cyan,
                             borderWidth: 1,
-                            data: [9, 1, 50, 329, 314, 764, 616, 813, 118, 18, 58,
-                                67, 336, 53, 1208, 95, 5, 206, 652, 76, 163, 8, 8,
-                                90, 7, 258, 611, 1130, 388, 208, 40, 53, 431, 703, 374,
-                                225, 217, 290, 279, 611, 537, 68, 143, 102, 160, 118]
+                            data: [24, 10, 50, 329, 318, 789, 616, 813, 126, 22, 99,
+                                82, 345, 61, 1222, 96, 33, 230, 699, 269, 421, 107, 217,
+                                370, 55, 324, 630, 1178, 389, 226, 62, 80, 437, 718, 386,
+                                254, 231, 308, 312, 613, 547, 132, 151, 108, 168, 135]
                         },
-                        {
+                            {
+                                label: 'Central route',
+                                backgroundColor: color(window.chartColors.black).alpha(0).rgbString(),
+                                borderColor: window.chartColors.red,
+                                borderWidth: 1,
+                                data: [9, 1, 50, 329, 314, 764, 616, 813, 118, 18, 58,
+                                    67, 336, 53, 1208, 95, 5, 206, 652, 76, 163, 8, 8,
+                                    90, 7, 258, 611, 1130, 388, 208, 40, 53, 431, 703, 374,
+                                    225, 217, 290, 279, 611, 537, 68, 143, 102, 160, 118]
+                            },
+                            {
+                                label: 'Easter and Western route',
+                                backgroundColor: color(window.chartColors.black).alpha(0).rgbString(),
+                                borderColor: window.chartColors.red,
+                                borderWidth: 1,
+                                data: [15, 9, 0, 0, 4, 25, 0, 0, 8, 4, 41, 15, 9, 8, 14,
+                                    1, 28, 24, 47, 193, 258, 99, 209, 280, 48, 66, 19,
+                                    48, 1, 18, 22, 27, 6, 15, 12, 29, 14, 18, 33,
+                                    2, 10, 64, 8, 6, 8, 17]
+                            }]
+
+                    };
+                    var barChartData = {
+                        labels: ["Jan 2014", "Feb 2014", "Mar 2014", "Apr 2014", "May 2014", "Jun 2014",
+                            "Jul 2014", "Aug 2014", "Sep 2014", "Oct 2014", "Nov 2014", "Dec 2014",
+                            "Jan 2015", "Feb 2015", "Mar 2015", "Apr 2015", "May 2015", "Jun 2015",
+                            "Jul 2015", "Aug 2015", "Sep 2015", "Oct 2015", "Nov 2015", "Dec 2015",
+                            "Jan 2016", "Feb 2016", "Mar 2016", "Apr 2016", "May 2016", "Jun 2016",
+                            "Jul 2016", "Aug 2016", "Sep 2016", "Oct 2016", "Nov 2016", "Dec 2016",
+                            "Jan 2017", "Feb 2017", "Mar 2017", "Apr 2017", "May 2017", "Jun 2017",
+                            "Jul 2017", "Aug 2017", "Sep 2017", "Oct 2017", "Nov 2017"],
+                        datasets: [{
+                            label: 'Total',
+                            backgroundColor: color("#181661").alpha(0.4).rgbString(),
+                            borderColor: color("#3c3f41").alpha(1).rgbString(),
+                            borderWidth: 2,
+                            data: [12]
+                        }, {label: 'Central route',
+                            backgroundColor: color("#ffffff").alpha(0).rgbString(),
+                            borderColor: color("#c50021").alpha(1).rgbString(),
+                            borderWidth: 2,
+                            data: [0] }, {
                             label: 'Easter and Western route',
-                            backgroundColor: color(window.chartColors.black).alpha(0).rgbString(),
-                            borderColor: window.chartColors.red,
-                            borderWidth: 1,
-                            data: [15, 9, 0, 0, 4, 25, 0, 0, 8, 4, 41, 15, 9, 8, 14,
-                                1, 28, 24, 47, 193, 258, 99, 209, 280, 48, 66, 19,
-                                48, 1, 18, 22, 27, 6, 15, 12, 29, 14, 18, 33,
-                                2, 10, 64, 8, 6, 8, 17]
-                        }]
+                            backgroundColor: color("#ffffff").alpha(0).rgbString(),
+                            borderColor: color("#c57800").alpha(1).rgbString(),
+                            borderWidth: 2,
+                            data: [12]}
 
-                };
-                var barChartData = {
-                    labels: ["January 2014", "February 2014", "March 2014", "April 2014", "May 2014", "June 2014",
-                        "July 2014", "August 2014", "September 2014", "October 2014", "November 2014", "December 2014",
-                        "January 2015", "February 2015", "March 2015", "April 2015", "May 2015", "June 2015",
-                        "July 2015", "August 2015", "September 2015", "October 2015", "November 2015", "December 2015",
-                        "January 2016", "February 2016", "March 2016", "April 2016", "May 2016", "June 2016",
-                        "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
-                        "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
-                        "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
-                    datasets: [{
-                        label: 'Total',
-                        backgroundColor: color("#181661").alpha(0.4).rgbString(),
-                        borderColor: color("#3c3f41").alpha(1).rgbString(),
-                        borderWidth: 2,
-                        data: [12]
-                    }, {label: 'Central route',
-                        backgroundColor: color("#ffffff").alpha(0).rgbString(),
-                        borderColor: color("#c50021").alpha(1).rgbString(),
-                        borderWidth: 2,
-                        data: [0] }, {
-                        label: 'Easter and Western route',
-                        backgroundColor: color("#ffffff").alpha(0).rgbString(),
-                        borderColor: color("#c57800").alpha(1).rgbString(),
-                        borderWidth: 2,
-                        data: [12]}
+                        ]
 
-                    ]
+                    };
 
-                };
-
-
-                window.onload = function() {
-                    var ctx = document.getElementById("canvas").getContext("2d");
-                    window.myBar = new Chart(ctx, {
-                        type: 'line',
-                        data: barChartData,
-                        options: {
-                            responsive: true,
-                            legend: {
-                                display: true,
-                                position: 'bottom'
-                            },
-                            gridLines: {
-                                display: false,
-                                drawBorder: false,
-                                drawOnChartArea: false,
-                                drawTicks: false,
-                            },
-
-                            title: {
-                                display: false,
-                                text: 'Migrants'
-                            },
-                            tooltips: {
-                                mode: 'index',
-                                intersect: true
-                            },
-                            scales: {
-                                xAxes: [{
+                    window.onload = function() {
+                        var ctx = document.getElementById("canvas").getContext("2d");
+                        window.myBar = new Chart(ctx, {
+                            type: 'line',
+                            data: barChartData,
+                            options: {
+                                responsive: true,
+                                legend: {
                                     display: true,
-                                    scaleLabel: {
+                                    position: 'bottom'
+                                },
+                                gridLines: {
+                                    display: false,
+                                    drawBorder: false,
+                                    drawOnChartArea: false,
+                                    drawTicks: false,
+                                },
+                                title: {
+                                    display: false,
+                                    text: 'Migrants'
+                                },
+                                tooltips: {
+                                    mode: 'index',
+                                    intersect: true
+                                },
+                                scales: {
+                                    xAxes: [{
                                         display: true,
-                                        labelString: 'Date'
-                                    }
-                                }],
-                                yAxes: [{
-                                    display: true,
-                                    scaleLabel: {
+                                        scaleLabel: {
+                                            display: false,
+                                            labelString: 'Date'
+                                        }
+                                    }],
+                                    yAxes: [{
                                         display: true,
-                                        labelString: 'Nb dead and missing'
-                                    }
-                                }]
+                                        scaleLabel: {
+                                            display: true,
+                                            labelString: 'Nb dead and missing'
+                                        }
+                                    }]
+                                }
                             }
+                        });
+                    };
+
+                    var graph = window.setInterval(function(){
+                        if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#5") ){
+                            barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
+                            barChartData.datasets[1].data.push(dataArray.datasets[1].data.shift());
+                            barChartData.datasets[2].data.push(dataArray.datasets[2].data.shift());
+                            window.myBar.update();
                         }
-                    });
-                };
-
-                var graph = window.setInterval(function(){
-                    if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#5") ){
-                        barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
-                        barChartData.datasets[1].data.push(dataArray.datasets[1].data.shift());
-                        barChartData.datasets[2].data.push(dataArray.datasets[2].data.shift());
-                        window.myBar.update();
-                    }
-                    else if(!(dataArray.datasets[0].data.length>0)){
-                        clearInterval(graph);
-                    }
-                }, 100);
-
-            </script>
+                        else if(!(dataArray.datasets[0].data.length>0)){
+                            clearInterval(graph);
+                        }
+                    }, 100);
+                </script>
         </div>
 
         <div class="section" id="section6">
