@@ -259,6 +259,13 @@
             #section10 h4 {
                 text-align: left;
                 padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            #section11 h4 {
+                text-align: left;
+                padding-left: 5%;
+                padding-right: 5%;
             }
 
             #infoMenu li a {
@@ -314,9 +321,6 @@
 
     </head>
     <body>
-
-
-
     <div id="fullpage">
 
         <div class="section" id="section0">
@@ -755,20 +759,20 @@
                         if (index2==0){
                             $.fn.fullpage.setMouseWheelScrolling(false);
                         }
-                        else if (index2 ==10){
+                        else if (index2 ==15){
                             document.getElementById("mig1").style.visibility = 'visible';
                             document.getElementById("mig0").style.visibility = 'hidden';
                             document.getElementById("titre92").style.visibility = 'hidden';
                             document.getElementById("titre93").style.visibility = 'visible';
                         }
-                        else if (index2 ==20){
+                        else if (index2 ==45){
                             document.getElementById("mig2").style.visibility = 'visible';
                             document.getElementById("mig1").style.visibility = 'hidden';
                             document.getElementById("titre93").style.visibility = 'hidden';
                             document.getElementById("titre94").style.visibility = 'visible';
                             $.fn.fullpage.setMouseWheelScrolling(true);
                         }
-                        index ++;
+                        index2 ++;
                     }
                 }, 400);
             </script>
@@ -803,6 +807,5 @@
         </div>
 
     </div>
-
     </body>
 </html>
