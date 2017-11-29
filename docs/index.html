@@ -260,15 +260,22 @@
                 font-size: 1.5em;
             }
 
-            #section10 h4 {
-                text-align: left;
+            #section10 h3 {
+                text-align: center;
                 padding-left: 5%;
                 padding-right: 5%;
+                color: #ffffff; 
             }
             #section10 img {
                 margin-top: 5%;
                 height: 50%;
-                border: 3px solid #ffffff;
+
+            }
+             #section10 .titreslide10 h3{
+                text-align: center;
+                padding-left: 5%;
+                padding-right: 5%;
+                color: #343434; 
             }
 
             #section11 h4 {
@@ -600,7 +607,7 @@
                 var map;
 
                 // svg path for target icon
-                var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
+                var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z ";
 
                 AmCharts.ready(function() {
                     map = new AmCharts.AmMap();
@@ -747,10 +754,11 @@
                 <h3>Now, let’s go back to the family we were following. <br />This tragic journey is unfortunately only one among many.</h3>
             </div>
             <div id="titre92" class="titre9">
-                <h4>Take 100 migrants</h4>
+                <h4> Suppose a boat of 100 persons  </h4>
             </div>
             <div id="titre93" class="titre9">
-                <h4>20 will be missing</h4>
+                <h4> At their arrival,
+                 <br>20 will be missing</h4>
             </div>
             <div id="titre94" class="titre9">
                 <h4>19 will be dead</h4>
@@ -795,10 +803,13 @@
         </div>
 
         <div class="section" id="section10">
-            <h4>A few months after they arrived at their final destination, the family got news from a friend they met during their migration: one of their missing relatives was dead.
-                <br />Some will never know what happened to their relatives. Others will receive a call.
+            <div class="titreslide10">
+            <h3>A few months after they arrived at their final destination, the family got news from a friend they met during their migration: one of their missing relatives was dead.</h3> </div>
+            
+            <h3> <br> <br />Some will never know what happened to their relatives. 
+                <br>Others will receive a call.
                 <br/>Those are the migrants you daily hear about in the news
-                <br/>For example, the Lampedusa catastrophe, during which 368 people died in 2013, motivated the Missing Migrant Project. </h4>
+                <br/>For example, the Lampedusa catastrophe, during which 368 people died in 2013, motivated the Missing Migrant Project. </h3>
             <img src="images/lampedusa_map.jpg" alt="lampedusa">
         </div>
 
