@@ -9,4 +9,4 @@ Source of data : https://missingmigrants.iom.int
 
 Website available here : https://migration-vizu.herokuapp.com/
 
-Not optimized for mobile
+_Not optimized for mobile_
