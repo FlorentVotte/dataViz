@@ -139,12 +139,44 @@
             }
 
             #section2 .text {
-                margin-left: 10%;
-                margin-right: 10%;
-            }
-            #section2 p {
-                text-align: left;
-            }
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: left;
+            font-size: 25px;
+            
+
+        }
+        #section2 p {
+            text-align: left;
+            font-size : 25px;
+        }
+
+        #section2 ul {
+            list-style-type: square;
+            text-align: left;
+            font-size: 20px;
+            
+        }
+
+        #section2 h2 {
+            text-align : center;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 0;
+            line-height: 1;
+
+        }
+
+        #section2 a{
+            color : navy blue;
+            font-size: 25px;
+            text-decoration: underline;
+            color: #000080;
+            padding: 5px 5px;
+            text-align: center; 
+            text-decoration: underline;
+            display: inline-block;
+}
 
             #section3 .layer{
                 position: absolute;
@@ -315,27 +347,29 @@
     </head>
     <body>
     <div id="fullpage">
-
-        <div class="section" id="section0">
-            <h1>Missing Migrant Project</h1>
-            <br>
-            <h3>Project of data vizualisation at Télécom ParisTech</h3>
-            <br>
-            <h4>Created by Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte</h4>
-        </div>
+    <div class="section " id="section0">
+        <h1> Missing Migrants Project</h1>
+        <br>
+        <h3>Data vizualisation project at Télécom ParisTech</h3>
+        <br>
+        <h4>Created by Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte</h4>
+        <h4>
+            December 2017
+        </h4>
+    </div>
 
         <div class="section" id="section1">
-            <div id="titre1" class="layer">
-                <h3>This is a family</h3>
-            </div>
-            <img id="family" src="images/family.png" alt="family" class="image">
-            <div id="titre2" class="layer">
-                <h3>They went on a journey !</h3>
-            </div>
-            <div id="titre3" class="layer">
-                <h3>But 2 people were missing</h3>
-            </div>
-            <img id="missing" src="images/family_missing.png" alt="missing" class="image">
+        <div id="titre1" class="layer">
+            <h3>This is a family. </h3>
+        </div>
+        <img id="family" src="images/family.png" alt="family" class="image">
+        <div id="titre2" class="layer">
+            <h3>They went on a journey !</h3>
+        </div>
+        <div id="titre3" class="layer">
+            <h3>But upon their arrival, 2 people were missing.</h3>
+        </div>
+        <img id="missing" src="images/family_missing.png" alt="missing" class="image">
 
 
             <script>
@@ -371,32 +405,26 @@
         </div>
 
         <div class="section" id="section2">
-            <div class="text">
-                <h2>Their journey was a migration</h2>
+        <div class="text">
+            <h2>Their journey was a migration</h2>
+            <br>
+            <p>
+                <b>Migrant : </b>  Any person who is moving or has moved across an international border or within:
+            </p> <br>
+            <p id="paragraphdef">
+                <ul>
+                  <li> A State away from his/her habitual place of residence, regardless of the person’s legal status. </li>
+                  <li> Whether the movement is voluntary or involuntary. </li>
+                  <li> What the causes for the movement are; or what the length of the stay is. </li>
+                </ul>
                 <br>
-                <p>
-                    <b>Migrant</b>  - IOM defines a migrant as any person who is moving or has moved across an international border or within:
-                </p> <br>
-                <p>
-                    -  a State away from his/her habitual place of residence, regardless of the person’s legal status.  <br>
-                </p>
-                <p>
-                    -  whether the movement is voluntary or involuntary. <br>
-                </p>
-                <p>
-                    -  what the causes for the movement are; or what the length of the stay is. <br>
-                </p>
-                <p>
-                    -  it includes migration of <a>refugees
-                    <span>According to UNHCR A refugee is someone who has been forced to flee his or her country because of persecution, war, or violence. A refugee has a well-founded fear of persecution for reasons of race, religion, nationality, political opinion or membership in a particular social group. Most likely, they cannot return home or are afraid to do so. War and ethnic, tribal and religious violence are leading causes of refugees fleeing their countries. More than half of all refugees worldwide come from just three countries: Syria, Afghanistan and South Sudan. Refugees benefit from a status, defined by several conventions and protocols, including the Geneva Convention.</span>
-                </a>, <a>displaced persons<span>According to UNHCR People forced to flee their homes but never cross an international border. These individuals are known as Internally Displaced Persons, or IDPs. These individuals seek safety anywhere they can find it—in nearby towns, schools, settlements, internal camps, even forests and fields. IDPs, which include people displaced by internal strife and natural disasters, are the largest group that UNHCR assists. Unlike refugees, IDPs are not protected by international law or eligible to receive many types of aid because they are legally under the protection of their own government. Countries with some the largest internally displaced populations are Colombia, Iraq and South Sudan.</span></a>,
-                    <a>economic migrants<span>This term is not a legal classification but can design people that move from a country to another for economic and professional reasons</span></a>,
-                    <a>asylum seekers<span>According to UNHCR When people flee their own country and seek sanctuary in another country, they apply for asylum – the right to be recognized as a refugee and receive legal protection and material assistance. An asylum seeker must demonstrate that his or her fear of persecution in his or her home country is well-founded. </span></a>
-                    and persons moving for other purposes, including family reunification.
-                </p>
-
-            </div>
+                It includes <a id="adef" href="https://www.iom.int/key-migration-terms">migration </a> of <b>refugees</b>, <b>displaced persons</b>, <b>economic migrants</b>, and persons moving for other purposes, including family reunification. 
+            </p>
+            
         </div>
+
+
+    </div>
 
         <div class="section" id="section3">
             <video id="myVideo" loop muted data-autoplay>
