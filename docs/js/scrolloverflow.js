@@ -2523,7 +2523,7 @@ if ( typeof module != 'undefined' && module.exports ) {
                 });
             }
 
-            //public functions
+            //docs functions
             self.createScrollBarForAll = createScrollBarForAll;
         }
 

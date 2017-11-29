@@ -1874,7 +1874,7 @@
         var name;
         for ( name in obj ) {
 
-            // if the public data object is empty, the private is still empty
+            // if the docs data object is empty, the private is still empty
             if ( name === "data" && jQuery.isEmptyObject( obj[name] ) ) {
                 continue;
             }
@@ -1941,7 +1941,7 @@
             }
         },
 
-        // not intended for public consumption - generates a queueHooks object, or returns the current one
+        // not intended for docs consumption - generates a queueHooks object, or returns the current one
         _queueHooks: function( elem, type ) {
             var key = type + "queueHooks";
             return jQuery._data( elem, key ) || jQuery._data( elem, key, {
@@ -2708,7 +2708,7 @@
     }
 
     /*
-     * Helper functions for managing events -- not part of the public interface.
+     * Helper functions for managing events -- not part of the docs interface.
      * Props to Dean Edwards' addEvent library for many of the ideas.
      */
     jQuery.event = {
@@ -6250,7 +6250,7 @@
             }
         }
 
-        // make the cloned public data object a copy from the original
+        // make the cloned docs data object a copy from the original
         if ( curData.data ) {
             curData.data = jQuery.extend( {}, curData.data );
         }

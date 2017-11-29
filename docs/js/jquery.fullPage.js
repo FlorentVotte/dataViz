@@ -503,7 +503,7 @@
         }
 
         if($(this).length){
-            //public functions
+            //docs functions
             FP.version = '2.9.5';
             FP.setAutoScrolling = setAutoScrolling;
             FP.setRecordHistory = setRecordHistory;
