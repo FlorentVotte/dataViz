@@ -147,37 +147,34 @@
             
 
         }
-        #section2 p {
-            text-align: left;
-            font-size : 25px;
-        }
+            #section2 p {
+                text-align: left;
+                font-size : 25px;
+            }
+            #section2 ul {
+                list-style-type: square;
+                text-align: left;
+                font-size: 20px;
 
-        #section2 ul {
-            list-style-type: square;
-            text-align: left;
-            font-size: 20px;
-            
-        }
+            }
+            #section2 h2 {
+                text-align : center;
+                font-size: 40px;
+                font-weight: bold;
+                margin-top: 0;
+                line-height: 1;
 
-        #section2 h2 {
-            text-align : center;
-            font-size: 40px;
-            font-weight: bold;
-            margin-top: 0;
-            line-height: 1;
-
-        }
-
-        #section2 a{
-            color : navy blue;
-            font-size: 25px;
-            text-decoration: underline;
-            color: #000080;
-            padding: 5px 5px;
-            text-align: center; 
-            text-decoration: underline;
-            display: inline-block;
-}
+            }
+            #section2 a{
+                color : navy blue;
+                font-size: 25px;
+                text-decoration: underline;
+                color: #000080;
+                padding: 5px 5px;
+                text-align: center;
+                text-decoration: underline;
+                display: inline-block;
+    }
 
             #section3 .layer{
                 position: absolute;
@@ -268,16 +265,27 @@
                 color: #ffffff; 
             }
             #section10 img {
-                margin-top: 5%;
                 height: 50%;
-
+                width: 50%;
+                position: absolute;
+                bottom: 0%;
+                right: 25%;
+                z-index: 1;
             }
-             #section10 .titreslide10 h3{
-                text-align: center;
-                padding-left: 5%;
-                padding-right: 5%;
-                color: #343434; 
+            #section10 .titreslide10 h3{
+                color: #343434;
+                position: absolute;
+                top: 5%;
+                height: 20%;
+                z-index: 2;
             }
+            #section10 .titreslide10-2 h3 {
+                font-size: 120%;
+                position: absolute;
+                top: 25%;
+                width: 90%;
+                z-index: 3;
+             }
 
             #section11 h4 {
                 text-align: left;
@@ -361,9 +369,7 @@
         <h3>Data vizualisation project at Télécom ParisTech</h3>
         <br>
         <h4>Created by Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte</h4>
-        <h4>
-            December 2017
-        </h4>
+        <h4>December 2017</h4>
     </div>
 
         <div class="section" id="section1">
@@ -805,13 +811,17 @@
 
         <div class="section" id="section10">
             <div class="titreslide10">
-            <h3>A few months after they arrived at their final destination, the family got news from a friend they met during their migration: one of their missing relatives was dead.</h3> </div>
-            
-            <h3> <br> <br />Some will never know what happened to their relatives. 
-                <br>Others will receive a call.
-                <br/>Those are the migrants you daily hear about in the news
-                <br/>For example, the Lampedusa catastrophe, during which 368 people died in 2013, motivated the Missing Migrant Project. </h3>
-            <img src="images/lampedusa_map.jpg" alt="lampedusa">
+                <h3>A few months after they arrived at their final destination, the family got news from a friend they met during their migration: one of their missing relatives was dead.</h3>
+            </div>
+            <div class="titreslide10-2">
+                <h3><br>Some will never know what happened to their relatives.
+                    <br>Others will receive a call.
+                    <br>Those are the migrants you daily hear about in the news
+                    <br>For example, the Lampedusa catastrophe, during which 368 people died in 2013, motivated the Missing Migrant Project. </h3>
+            </div>
+            <div >
+                <img src="images/lampedusa_map.png" alt="lampedusa" id="lampedusa">
+            </div>
         </div>
 
         <div class="section" id="section11">
