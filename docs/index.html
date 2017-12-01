@@ -270,6 +270,70 @@
                 bottom: 2%;
             }
 
+            #section4 .europe {
+                position: absolute;
+                top: 0%;
+                right: 0%;
+                width: 100%;
+                z-index: 1;
+            }
+            #section4 #slide1_4 {
+                position: absolute;
+                top:0;
+                height: 100%;
+                width: 100%;
+                z-index: 99;
+            }
+            #section4 #slide2_4 {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                margin-bottom: 4%;
+                z-index: 99;
+            }
+            #section4 #slide2_4 h1 {
+                position: relative;
+                bottom:0;
+                margin-left: 4%;
+                text-align: left;
+            }
+            #section4 #slide3_4 {
+                position: absolute;
+                width: 100%;
+                margin-bottom: 4%;
+                bottom: 0;
+                z-index: 99;
+            }
+            #section4 #slide3_4 h1 {
+                position: relative;
+                bottom:0;
+                margin-left: 4%;
+                text-align: left;
+            }
+            #section4 #slide4_4 {
+                position: absolute;
+                top: 35%;
+                width: 100%;
+                z-index: 99;
+            }
+            #section4 #slide5_4 {
+                position: absolute;
+                top: 45%;
+                height: 40%;
+                width: 100%;
+            }
+            #section4 #slide5_4 h1 {
+                font-size: 6em;
+            }
+            #section4 #slide6_4 {
+                position: absolute;
+                top: 15%;
+                width: 100%;
+            }
+            #section4 #slide6_4 h1 {
+                font-size: 6em;
+            }
+
 
             #section5 p {
                 font-size: 20px;
@@ -576,63 +640,85 @@
                         }
                         index3 ++;
                     }
-                }, 400);
+                }, 600);
             </script>
         </div>
 
         <div class="section" id="section4">
+            <img src="images/Europecoupe.png" id="europeC" alt="EU" class="europe">
+            <img src="images/Europelarge.png" id="europeL" alt="EU" class="europe" style="margin-top: -20%">
             <div id="slide1_4" class="layer">
-                <h2>By the end of 2016,</h2>
-                <h1>65.6 million</h1>
-                <h2>individuals were forcibly<br>displaced worldwide</h2>
-                <h3>Source: UNHCR</h3>
+                <img src="images/centmille.png" alt="centmille" style="z-index: 99">
             </div>
             <div id="slide2_4" class="layer">
-                <h1>This is equivalent to the<br>population of the UK</h1>
-                <h2>65.6 million</h2>
-                <h3>Source: UK Office for National Statistics</h3>
+                <h1>In 2017,</h1>
+                <h1>between</h1>
+                <h1>January and July only</h1>
             </div>
             <div id="slide3_4" class="layer">
-                <h2>By the end of 2016,<br>there were also</h2>
-                <h1>22.5 million</h1>
-                <h2>refugees in the world</h2>
-                <h3>Source: UNHCR</h3>
+                <h1>more than</h1>
+                <h1>100 000 people</h1>
             </div>
             <div id="slide4_4" class="layer">
-                <h1>This is more than 10 times<br>the population of Paris</h1>
-                <h3>Source: INSEE</h3>
+                <h1>Successfully</h1>
+                <h1>reached Europe</h1>
+            </div>
+            <div id="slide5_4" class="layer">
+                <h1>by sea.</h1>
+            </div>
+            <div id="slide6_4" class="layer">
+                <h1>But what about</h1>
+                <h1>the ones</h1>
+                <h1>that never arrived</h1>
+                <h1>the other shore?</h1>
             </div>
 
             <script>
-                var index3 = 0;
+                var index4 = 0;
 
                 document.getElementById("slide2_4").style.visibility = 'hidden';
                 document.getElementById("slide3_4").style.visibility = 'hidden';
                 document.getElementById("slide4_4").style.visibility = 'hidden';
+                document.getElementById("slide5_4").style.visibility = 'hidden';
+                document.getElementById("slide6_4").style.visibility = 'hidden';
+                document.getElementById("europeL").style.visibility = 'hidden';
+                document.getElementById("section4").style.background = 'url(images/FondMer.png)';
+                document.getElementById("section4").style.backgroundSize = '100%';
+                document.getElementById("section4").style.backgroundColor = '#607688';
 
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#4")){
-                        if (index3 ==0){
+                        if (index4 ==0){
                             $.fn.fullpage.setMouseWheelScrolling(false);
                         }
-                        else if (index3 ==10){
+                        else if (index4 ==10){
                             document.getElementById("slide2_4").style.visibility = 'visible';
                             document.getElementById("slide1_4").style.visibility = 'hidden';
-                            document.getElementById("section4").style.backgroundColor = '#FFFFFF';
                         }
-                        else if (index3 ==20){
+                        else if (index4 ==20){
                             document.getElementById("slide3_4").style.visibility = 'visible';
                             document.getElementById("slide2_4").style.visibility = 'hidden';
-                            document.getElementById("section3").style.backgroundColor = '#54788b';
                         }
-                        else if (index3 == 30){
+                        else if (index4 ==30){
                             document.getElementById("slide4_4").style.visibility = 'visible';
+                            document.getElementById("europeL").style.visibility = 'visible';
+                            document.getElementById("europeC").style.visibility = 'hidden';
                             document.getElementById("slide3_4").style.visibility = 'hidden';
-                            document.getElementById("section3").style.backgroundColor = '#FFFFFF';
+                        }
+                        else if (index4 ==40){
+                            document.getElementById("slide5_4").style.visibility = 'visible';
+                            document.getElementById("europeL").style.visibility = 'hidden';
+                            document.getElementById("slide4_4").style.visibility = 'hidden';
+                        }
+                        else if (index4 == 50){
+                            document.getElementById("section4").style.background = 'url(images/FondHommes.png)';
+                            document.getElementById("section4").style.backgroundColor = '#607688';
+                            document.getElementById("slide6_4").style.visibility = 'visible';
+                            document.getElementById("slide5_4").style.visibility = 'hidden';
                             $.fn.fullpage.setMouseWheelScrolling(true);
                         }
-                        index3 ++;
+                        index4 ++;
                     }
                 }, 400);
             </script>
