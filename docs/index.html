@@ -884,7 +884,8 @@
         </div>
 
         <div class="section" id="section6">
-            <h3>First, let us focus on the Central Mediterranean route : the most taken and dealiest one.</h3>
+            <h3>First, let us focus on the Central Mediterranean route : 
+                <br>the most taken and dealiest one.</h3>
 
             <div id="titre6_1" class="layer">
                 <p>Throughout their journey, migrants on the Central Mediterranean route will face many dangers that
@@ -976,13 +977,57 @@
         </div>
 
         <div class="section" id="section7">
-            <h5>The Eastern route, increasingly used by migrants since 2015, is a lot less dangerous.</h5>
-            <p>By taking the Eastern route, migrants cross from Turkey to Greece and face the most common cause of death on this path : <b>drowing</b> too and the second is <b>vehicle accident</b></p>
+            <h5>The Eastern route, increasingly used by migrants crossing from Turkey to Greece since 2015, is a lot less dangerous but still very deadly.</h5>
+            
+
+            <div id="titre7_1" class="layer">
+                <p>The most common cause of death on this path remains <b>drowning</b>. But for each drowned migrant on the Eastern route, 3 die drowning on the Central route.</p> <br>
+                <img src="images/Eastern-boat.png" alt="">
+            </div>
+            <div id="titre7_2" class="layer">
+            <p>There are also much less deaths whose cause remain unknown or unspecified, since the bodies are more easily found and information collected on the Eastern route.</p> <br>
+                <img src="images/Eastern-unknown.png" alt="">
+            </div>
+            <div id="titre7_3" class="layer">
+                <p>Finally, a new cause of death appeared on the Eastern route : vehicule accident. It is the second cause of death on this route, far behind drowning.</p> <br>
+                <img src="images/Eastern-truck.png" alt="">
+            </div>
+            
+
+            <script>
+                var index5 = 0;
+
+                document.getElementById("titre7_2").style.visibility = 'hidden';
+                document.getElementById("titre7_3").style.visibility = 'hidden';
+                
+
+                window.setInterval(function(){
+
+                    if ((window.location.hash==="#7")){
+                        if (index5 == 0){
+                            $.fn.fullpage.setMouseWheelScrolling(false);
+                        }
+                        else if (index5 == 20){
+                            document.getElementById("titre7_1").style.visibility = 'hidden';
+                            document.getElementById("titre7_2").style.visibility = 'visible';
+                        }
+                        else if (index5 == 40){
+                            document.getElementById("titre7_2").style.visibility = 'hidden';
+                            document.getElementById("titre7_3").style.visibility = 'visible';
+                        }
+                    
+                        index5 ++;
+                    }
+                }, 500);
+            </script>
+        </div>
+
         </div>
 
         <div class="section" id="section8">
             <div class="text_up_to_maps">
-                <h2>Main route of migration</h2>
+                <h3>Those are only two of the most dangerous migration routes in the world.
+<br>Take a look at the other deadly routes across the globe.</h3>
             </div>
             <script>
                 var map;
