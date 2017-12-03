@@ -7,6 +7,6 @@ Missing Migrant Project
 
 Source of data : https://missingmigrants.iom.int
 
-Website available here : https://migration-vizu.herokuapp.com/
+Website available here : http://florentvotte.github.io/dataViz/
 
 _Not optimized for mobile_
