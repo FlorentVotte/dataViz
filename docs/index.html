@@ -344,13 +344,28 @@
                 margin-top: -2%;
             }
 
-            #section6 p {
-                font-size: 25px;
+            #section6 h5 {
+                position: absolute;
+                width: 90%;
+                top: 5%;
                 margin-left: 5%;
                 margin-right: 5%;
-                margin-bottom: 2%;
-                margin-top: 2%;
-                text-align: left;
+            }
+            #section6 .layer{
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 20%;
+                -webkit-transform: translate3d(0,0,0);
+                -ms-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+            }
+            #section6 .layer img {
+                margin-top: -13%;
+                width: 50%;
+            }
+            #section6 .layer p {
+                text-align: center;
             }
 
             #section7 p {
@@ -861,8 +876,94 @@
 
         <div class="section" id="section6">
             <h5>First, let us focus on the Central Mediterranean route</h5>
-            <p> By taking the central route, migrants will have to travel on boats and face the most common cause of death in the mediterranean sea: <b>drowning</b>.</p>
 
+            <div id="titre6_1" class="layer">
+                <p>Throughout their journey, migrants on the Central Mediterranean route will face many dangers that
+                    may lead to their death.</p> <br>
+                <img src="images/1-Migrants-boat.png" alt="">
+            </div>
+            <div id="titre6_2" class="layer">
+            <p>Since 2014, 2844 migrants have drowned on this route and 91 are presumed drowned. Drowning is
+                therefore the main cause of death, with an overwhelming majority.</p> <br>
+                <img src="images/2-Migrants-boat-drowning.png" alt="">
+            </div>
+            <div id="titre6_3" class="layer">
+                <p>The cause of 599 deaths still remains unknown or unspecified, due to the difficulty to gather
+                    information and find bodies.</p> <br>
+                <img src="images/3-Migrants-boat-unknown.png" alt="">
+            </div>
+            <div id="titre6_4" class="layer">
+                <p>179 migrants died of suffocation or asphyxiation.</p> <br> <br>
+                <img src="images/4-Migrants-boat-suffocation-asph.png" alt="">
+            </div>
+            <div id="titre6_5" class="layer">
+                <p>62 died of hyperthermia or burnings.</p> <br> <br>
+                <img src="images/5-Migrants-boat-burned.png" alt="">
+            </div>
+            <div id="titre6_6" class="layer">
+                <p>57 died of hypothermia.</p> <br> <br>
+                <img src="images/6-Migrants-boat-hypothermia.png" alt="">
+            </div>
+            <div id="titre6_7" class="layer">
+                <p>57 were crushed.</p> <br> <br>
+                <img src="images/6-Migrants-boat-hypothermia.png" alt="">
+            </div>
+            <div id="titre6_8" class="layer">
+                <p>Finally, about 70 others died of less frequent causes, mostly linked to the harsh conditions of
+                    their migration : starvation, dehydration, violence on board, lack of access to medical aid...</p>
+                <img src="images/8-Migrants-boat-all.png" alt="">
+            </div>
+
+            <script>
+                var index5 = 0;
+
+                document.getElementById("titre6_2").style.visibility = 'hidden';
+                document.getElementById("titre6_3").style.visibility = 'hidden';
+                document.getElementById("titre6_4").style.visibility = 'hidden';
+                document.getElementById("titre6_5").style.visibility = 'hidden';
+                document.getElementById("titre6_6").style.visibility = 'hidden';
+                document.getElementById("titre6_7").style.visibility = 'hidden';
+                document.getElementById("titre6_8").style.visibility = 'hidden';
+
+                window.setInterval(function(){
+
+                    if ((window.location.hash==="#6")){
+                        if (index5 == 0){
+                            $.fn.fullpage.setMouseWheelScrolling(false);
+                        }
+                        else if (index5 == 15){
+                            document.getElementById("titre6_1").style.visibility = 'hidden';
+                            document.getElementById("titre6_2").style.visibility = 'visible';
+                        }
+                        else if (index5 == 25){
+                            document.getElementById("titre6_2").style.visibility = 'hidden';
+                            document.getElementById("titre6_3").style.visibility = 'visible';
+                        }
+                        else if (index5 == 35){
+                            document.getElementById("titre6_3").style.visibility = 'hidden';
+                            document.getElementById("titre6_4").style.visibility = 'visible';
+                        }
+                        else if (index5 == 45){
+                            document.getElementById("titre6_4").style.visibility = 'hidden';
+                            document.getElementById("titre6_5").style.visibility = 'visible';
+                        }
+                        else if (index5 == 55){
+                            document.getElementById("titre6_5").style.visibility = 'hidden';
+                            document.getElementById("titre6_6").style.visibility = 'visible';
+                        }
+                        else if (index5 == 65){
+                            document.getElementById("titre6_6").style.visibility = 'hidden';
+                            document.getElementById("titre6_7").style.visibility = 'visible';
+                        }
+                        else if (index5 == 75){
+                            document.getElementById("titre6_7").style.visibility = 'hidden';
+                            document.getElementById("titre6_8").style.visibility = 'visible';
+                            $.fn.fullpage.setMouseWheelScrolling(true);
+                        }
+                        index5 ++;
+                    }
+                }, 500);
+            </script>
         </div>
 
         <div class="section" id="section7">
