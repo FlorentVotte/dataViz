@@ -23,7 +23,6 @@
         <script src="js/worldHigh.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
         <link rel="stylesheet" type="text/css" href="css/examples.css"/>
-        <link rel="stylesheet" type="text/css" href="css/wave.css"/>
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
 
         <!-- Config de FullPage -->
@@ -39,7 +38,7 @@
 
 
                     anchors:['0','1', '2', '3', '4','5', '6', '7', '8', '9', '10', '11', '12', '13', '14','15', '16', '17'],
-                    sectionsColor: ['#95b2c8', '#7BAABE', '#54788b','#7BAABE','#54788b','#7BAABE','#54788b','#7BAABE','#54788b','#7BAABE',
+                    sectionsColor: ['#54788b', '#7BAABE', '#54788b','#7BAABE','#54788b','#7BAABE','#54788b','#7BAABE','#54788b','#7BAABE',
                         '#54788b','#7BAABE','#54788b','#7BAABE','#54788b','#7BAABE','#54788b','#7BAABE']
 
                 });
@@ -90,11 +89,20 @@
                 overflow: hidden;
             }
 
+            #section0 {
+                background-image: url("images/FondMer.png");
+                background-size: 100%;
+            }
+            #section0 h1 {
+                z-index: 5;
+            }
             #section0 h3 {
                 color: #e0e0e0;
+                z-index: 5;
             }
             #section0 h4 {
                 color: #c0c0c0;
+                z-index: 5;
             }
 
             #section1 h1 {
@@ -552,13 +560,6 @@
                 text-align:center;
                 padding: 5%;
             }
-            #vagues {
-                position: absolute;
-                bottom: -85%;
-                left: -100%;
-                right: -100%;
-                z-index: 99;
-            }
 
         </style>
 
@@ -573,125 +574,6 @@
         <br>
         <h4>Created by Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte</h4>
         <h4>December 2017</h4>
-        <div id="vagues">
-            <div class="container" style="z-index: 99">
-                <div class="row-one">
-                    <div class="v-wave-l"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-
-                </div>
-                <div class="row-two">
-                    <div class="v-wave-l"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-
-                    <div class="v-wave-r"></div>
-                </div>
-                <div class="row-three">
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-
-                </div>
-                <div class="row-four">
-                    <div class="v-wave-l"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-
-                </div>
-                <div class="row-five">
-                    <div class="v-wave-l"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                    <div class="wave"></div>
-                </div>
-                <div class="row-six"></div>
-            </div>
-        </div>
         </div>
 
         <div class="section" id="section1">
