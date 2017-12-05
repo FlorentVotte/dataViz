@@ -1401,19 +1401,53 @@
         <div class="section" id="section11">
             <h3>The stakes are high. There is a need to collect information from newspapers, aggregate data coming from thousands of voluntaries involved in the study of migrations flows or even in the rescue.
                 <br />This information is incredibly hard to collect and analyse, but things get done thanks to the work of thousands of UN workers, journalists, NGOs, migrants witnesses...
-                <br> Information mainly come from 3 types of sources. 
-                Local Autorithies
-                Media
-                 National Organizations </h3>
+            <img src="images/news0.png" id="news0" alt="news0" class="image">
+            <img src="images/news1.png" id="news1" alt="news1" class="image">
+            <img src="images/news2.png" id="news2" alt="news2" class="image">
+            <img src="images/news3.png" id="news3" alt="news3" class="image">
 
-                 <img src="images/doctor.png">
-                 <img src="images/policeman.png">
-                 <img src="images/television.png">
-                 <img src="images/news.png">
-                 <img src="images/radio.png">
-                 <img src="images/IOM.png">
-    
+             <script>
+                var index2 = 0;
 
+                document.getElementById("news1").style.visibility = 'hidden';
+                document.getElementById("news2").style.visibility = 'hidden';
+                document.getElementById("news3").style.visibility = 'hidden';
+                document.getElementById("news4").style.visibility = 'hidden';
+
+
+                window.setInterval(function(){
+
+                    if ((window.location.hash==="#11")){
+                        if (index2==0){
+                            $.fn.fullpage.setMouseWheelScrolling(false);
+                        }
+                        else if (index2 ==25){
+                            document.getElementById("news1").style.visibility = 'visible';
+                            document.getElementById("news0").style.visibility = 'hidden';
+                            document.getElementById("news2").style.visibility = 'hidden';
+                            document.getElementById("news3").style.visibility = 'hidden';
+                            
+                        }
+                        else if (index2 ==35){
+                             document.getElementById("news2").style.visibility = 'visible';
+                            document.getElementById("news0").style.visibility = 'hidden';
+                            document.getElementById("news3").style.visibility = 'hidden';
+                            document.getElementById("news1").style.visibility = 'hidden';
+
+                         else if (index2 ==45){
+                             document.getElementById("news3").style.visibility = 'visible';
+                            document.getElementById("news0").style.visibility = 'hidden';
+                            document.getElementById("news2").style.visibility = 'hidden';
+                            document.getElementById("news1").style.visibility = 'hidden';
+                            $.fn.fullpage.setMouseWheelScrolling(true);
+                        }
+                        index2 ++;
+                    }
+                }, 500);
+            </script>
+
+
+            
         </div>
 
         <div class="section" id="section12">
