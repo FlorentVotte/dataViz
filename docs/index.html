@@ -494,26 +494,22 @@
                 text-align: left;
                 padding-left: 5%;
                 padding-right: 5%;
-           
-            }
-
-            #section11 .image{
-                position: absolute;
-                height: 70%;
-                width: 60%;
-                left: 20%;
-                top: 30%;
-                -webkit-transform: translate3d(0,0,0);
-                -ms-transform: translate3d(0,0,0);
-                transform: translate3d(0,0,0);
-             }
-
-
-            #section11 h4 {
                 color: #ffffff;
                 font-size: 1.5em;
+            }
+            #section11 #titre111{
+                position: absolute;
+                top:0;
+                height: 30%;
 
-            }  
+            }
+            #section11 .image {
+                position: absolute;
+                left: 25%;
+                top: 30%;
+                width: 50%;
+             }
+
 
             #section12 h3 {
                 color: white;
@@ -587,12 +583,12 @@
     <div id="fullpage">
 
         <div class="section" id="section0">
-        <h1> Missing Migrants Project</h1>
-        <br>
-        <h3>Data vizualisation project at Télécom ParisTech</h3>
-        <br>
-        <h4>Created by Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte</h4>
-        <h4>December 2017</h4>
+            <h1> Missing Migrants Project</h1>
+            <br>
+            <h3>Data vizualisation project at Télécom ParisTech</h3>
+            <br>
+            <h4>Created by Arlène Botokro, Mathilda Di Matteo, Marine Hévin and Florent Votte</h4>
+            <h4>December 2017</h4>
         </div>
 
         <div class="section" id="section1">
@@ -1301,15 +1297,18 @@
         <div id="titre111" class="layer">
             <h3>The stakes are high. There is a need to collect information from newspapers, aggregate data coming from thousands of voluntaries involved in the study of migrations flows or even in the rescue.</h3>
                 <h4> <br />This information is incredibly hard to collect and analyse, but things get done thanks to the work of thousands of UN workers, journalists, NGOs, migrants witnesses...</h4>
+            </div>
+            <div class="image11">
+                <img src="images/news0.png" id="news0" alt="news0" class="image">
+                <img src="images/news1.png" id="news1" alt="news1" class="image">
+                <img src="images/news2.png" id="news2" alt="news2" class="image">
+                <img src="images/news3.png" id="news3" alt="news3" class="image">
+            </div>
 
-            <img src="images/news0.png" id="news0" alt="news0" class="image">
-            <img src="images/news1.png" id="news1" alt="news1" class="image">
-            <img src="images/news2.png" id="news2" alt="news2" class="image">
-            <img src="images/news3.png" id="news3" alt="news3" class="image">
+
 
             <script>
                 var index10 = 0;
-                document.getElementById("news0").style.visibility = 'hidden';
                 document.getElementById("news1").style.visibility = 'hidden';
                 document.getElementById("news2").style.visibility = 'hidden';
                 document.getElementById("news3").style.visibility = 'hidden';
@@ -1324,26 +1323,20 @@
                         else if (index10 ==20) {
                             document.getElementById("news1").style.visibility = 'visible';
                             document.getElementById("news0").style.visibility = 'hidden';
-                            document.getElementById("news2").style.visibility = 'hidden';
-                            document.getElementById("news3").style.visibility = 'hidden';
 
                         }
                         else if (index10 ==40) {
                             document.getElementById("news2").style.visibility = 'visible';
-                            document.getElementById("news0").style.visibility = 'hidden';
-                            document.getElementById("news3").style.visibility = 'hidden';
                             document.getElementById("news1").style.visibility = 'hidden';
                         }
                         else if (index10==60){
                             document.getElementById("news3").style.visibility = 'visible';
-                            document.getElementById("news0").style.visibility = 'hidden';
                             document.getElementById("news2").style.visibility = 'hidden';
-                            document.getElementById("news1").style.visibility = 'hidden';
                             $.fn.fullpage.setMouseWheelScrolling(true);
                         }
                         index10 ++;
                         }
-                    }, 500);
+                    }, 100);
             </script>
 
         </div>
