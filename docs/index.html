@@ -1301,7 +1301,50 @@
         <div id="titre111" class="layer">
             <h3>The stakes are high. There is a need to collect information from newspapers, aggregate data coming from thousands of voluntaries involved in the study of migrations flows or even in the rescue.</h3>
                 <h4> <br />This information is incredibly hard to collect and analyse, but things get done thanks to the work of thousands of UN workers, journalists, NGOs, migrants witnesses...</h4>
-        
+
+            <img src="images/news0.png" id="news0" alt="news0" class="image">
+            <img src="images/news1.png" id="news1" alt="news1" class="image">
+            <img src="images/news2.png" id="news2" alt="news2" class="image">
+            <img src="images/news3.png" id="news3" alt="news3" class="image">
+
+            <script>
+                var index10 = 0;
+                document.getElementById("news0").style.visibility = 'hidden';
+                document.getElementById("news1").style.visibility = 'hidden';
+                document.getElementById("news2").style.visibility = 'hidden';
+                document.getElementById("news3").style.visibility = 'hidden';
+
+
+                window.setInterval(function(){
+
+                    if ((window.location.hash==="#11")){
+                        if (index10==0){
+                            $.fn.fullpage.setMouseWheelScrolling(false);
+                        }
+                        else if (index10 ==20) {
+                            document.getElementById("news1").style.visibility = 'visible';
+                            document.getElementById("news0").style.visibility = 'hidden';
+                            document.getElementById("news2").style.visibility = 'hidden';
+                            document.getElementById("news3").style.visibility = 'hidden';
+
+                        }
+                        else if (index10 ==40) {
+                            document.getElementById("news2").style.visibility = 'visible';
+                            document.getElementById("news0").style.visibility = 'hidden';
+                            document.getElementById("news3").style.visibility = 'hidden';
+                            document.getElementById("news1").style.visibility = 'hidden';
+                        }
+                        else if (index10==60){
+                            document.getElementById("news3").style.visibility = 'visible';
+                            document.getElementById("news0").style.visibility = 'hidden';
+                            document.getElementById("news2").style.visibility = 'hidden';
+                            document.getElementById("news1").style.visibility = 'hidden';
+                            $.fn.fullpage.setMouseWheelScrolling(true);
+                        }
+                        index10 ++;
+                        }
+                    }, 500);
+            </script>
 
         </div>
 
