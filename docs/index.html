@@ -575,6 +575,12 @@
                 text-align:center;
                 padding: 5%;
             }
+            .replay {
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                z-index: 99;
+            }
 
         </style>
 
@@ -603,6 +609,7 @@
                 <h3>But upon their arrival, 2 people were missing.</h3>
             </div>
             <img id="missing" src="images/family_missing.png" alt="missing" class="image">
+            <a id="replay2" onclick="replay()"><img src="images/replay.png"  class="replay"></a>
 
 
             <script>
@@ -611,12 +618,30 @@
                 document.getElementById("titre2").style.visibility = 'hidden';
                 document.getElementById("titre3").style.visibility = 'hidden';
                 document.getElementById("missing").style.visibility = 'hidden';
+                document.getElementById("replay2").style.visibility = 'hidden';
+
+
+                function replay() {
+                    index =0;
+                    document.getElementById("titre2").style.visibility = 'hidden';
+                    document.getElementById("titre3").style.visibility = 'hidden';
+                    document.getElementById("missing").style.visibility = 'hidden';
+                    document.getElementById("replay2").style.visibility = 'hidden';
+                    document.getElementById("family").style.visibility = 'visible';
+                    document.getElementById("titre1").style.visibility = 'visible';
+                }
+
 
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#1")){
                         if (index==0){
-                            $.fn.fullpage.setMouseWheelScrolling(false);
+                            document.getElementById("titre2").style.visibility = 'hidden';
+                            document.getElementById("titre3").style.visibility = 'hidden';
+                            document.getElementById("missing").style.visibility = 'hidden';
+                            document.getElementById("replay2").style.visibility = 'hidden';
+                            document.getElementById("family").style.visibility = 'visible';
+                            document.getElementById("titre1").style.visibility = 'visible';
                         }
                         else if (index ==8){
                             document.getElementById("titre2").style.visibility = 'visible';
@@ -627,7 +652,9 @@
                             document.getElementById("titre2").style.visibility = 'hidden';
                             document.getElementById("family").style.visibility = 'hidden';
                             document.getElementById("missing").style.visibility = 'visible';
-                            $.fn.fullpage.setMouseWheelScrolling(true);
+                        }
+                        else if (index == 30){
+                            document.getElementById("replay2").style.visibility = 'visible';
                         }
                         index ++;
                     }
@@ -649,7 +676,7 @@
                       <li> What the causes for the movement are; or what the length of the stay is. </li>
                     </ul>
                     <br>
-                    It includes <a id="adef" href="https://www.iom.int/key-migration-terms">migration </a> of <b>refugees</b>, <b>displaced persons</b>, <b>economic migrants</b>, and persons moving for other purposes, including family reunification.
+                    It includes <a id="adef" href="https://www.iom.int/key-migration-terms" target="_blank">migration </a> of <b>refugees</b>, <b>displaced persons</b>, <b>economic migrants</b>, and persons moving for other purposes, including family reunification.
                 </p>
             </div>
         </div>
@@ -678,6 +705,7 @@
                 <img src="images/Paris_bis.png" alt="paris">
                 <h3>Source: INSEE</h3>
             </div>
+            <a id="replay3" onclick="replay3()"><img src="images/replay.png"  class="replay"></a>
 
             <script>
                 var index3 = 0;
@@ -685,12 +713,23 @@
                 document.getElementById("slide2").style.visibility = 'hidden';
                 document.getElementById("slide3").style.visibility = 'hidden';
                 document.getElementById("slide4").style.visibility = 'hidden';
+                document.getElementById("replay3").style.visibility = 'hidden';
+
+                function replay3(){
+                    index3 = 0;
+                    document.getElementById("slide1").style.visibility = 'visible';
+                    document.getElementById("slide2").style.visibility = 'hidden';
+                    document.getElementById("slide3").style.visibility = 'hidden';
+                    document.getElementById("slide4").style.visibility = 'hidden';
+                    document.getElementById("replay3").style.visibility = 'hidden';
+                    document.getElementById("section3").style.backgroundColor = '#7BAABE';
+                }
 
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#3")){
                         if (index3 ==0){
-                            $.fn.fullpage.setMouseWheelScrolling(false);
+
                         }
                         else if (index3 ==20){
                             document.getElementById("slide2").style.visibility = 'visible';
@@ -706,7 +745,10 @@
                             document.getElementById("slide4").style.visibility = 'visible';
                             document.getElementById("slide3").style.visibility = 'hidden';
                             document.getElementById("section3").style.backgroundColor = '#FFFFFF';
-                            $.fn.fullpage.setMouseWheelScrolling(true);
+                            document.getElementById("replay3").style.visibility = 'visible';
+                        }
+                        else if (index6 == 70){
+                            document.getElementById("replay3").style.visibility = 'visible';
                         }
                         index3 ++;
                     }
@@ -718,7 +760,7 @@
             <img src="images/Europecoupe.png" id="europeC" alt="EU" class="europe">
             <img src="images/Europelarge.png" id="europeL" alt="EU" class="europe" style="margin-top: -20%">
             <div id="slide1_4" class="layer">
-                <img src="images/centmille.png" alt="centmille" style="z-index: 99">
+                <img src="images/centmille.png" alt="centmille" style="z-index: 90">
             </div>
             <div id="slide2_4" class="layer">
                 <h1>In 2017,</h1>
@@ -743,6 +785,8 @@
                 <h1>to the other shore?</h1>
             </div>
 
+            <a id="replay4" onclick="replay4()"><img src="images/replay.png"  class="replay"></a>
+
             <script>
                 var index4 = 0;
 
@@ -752,15 +796,34 @@
                 document.getElementById("slide5_4").style.visibility = 'hidden';
                 document.getElementById("slide6_4").style.visibility = 'hidden';
                 document.getElementById("europeL").style.visibility = 'hidden';
+                document.getElementById("replay4").style.visibility = 'hidden';
                 document.getElementById("section4").style.background = 'url(images/FondMer.png)';
                 document.getElementById("section4").style.backgroundSize = '100%';
                 document.getElementById("section4").style.backgroundColor = '#607688';
+
+
+                function replay4(){
+                    index4 = 0;
+
+                    document.getElementById("slide2_4").style.visibility = 'hidden';
+                    document.getElementById("slide3_4").style.visibility = 'hidden';
+                    document.getElementById("slide4_4").style.visibility = 'hidden';
+                    document.getElementById("slide5_4").style.visibility = 'hidden';
+                    document.getElementById("slide6_4").style.visibility = 'hidden';
+                    document.getElementById("europeL").style.visibility = 'hidden';
+                    document.getElementById("replay4").style.visibility = 'hidden';
+                    document.getElementById("section4").style.background = 'url(images/FondMer.png)';
+                    document.getElementById("section4").style.backgroundSize = '100%';
+                    document.getElementById("section4").style.backgroundColor = '#607688';
+                    document.getElementById("slide1_4").style.visibility = 'visible';
+                    document.getElementById("europeC").style.visibility = 'visible';
+                }
 
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#4")){
                         if (index4 ==0){
-                            $.fn.fullpage.setMouseWheelScrolling(false);
+
                         }
                         else if (index4 ==20){
                             document.getElementById("slide2_4").style.visibility = 'visible';
@@ -786,7 +849,8 @@
                             document.getElementById("section4").style.backgroundColor = '#607688';
                             document.getElementById("slide6_4").style.visibility = 'visible';
                             document.getElementById("slide5_4").style.visibility = 'hidden';
-                            $.fn.fullpage.setMouseWheelScrolling(true);
+                            document.getElementById("replay4").style.visibility = 'visible';
+
                         }
                         index4 ++;
                     }
@@ -975,6 +1039,8 @@
                     their migration : starvation, dehydration, violence on board, lack of access to medical aid...</p>
                 <img src="images/8-Migrants-boat-all.png" alt="">
             </div>
+            <a id="replay6" onclick="replay6()"><img src="images/replay.png"  class="replay"></a>
+
 
             <script>
                 var index5 = 0;
@@ -986,12 +1052,27 @@
                 document.getElementById("titre6_6").style.visibility = 'hidden';
                 document.getElementById("titre6_7").style.visibility = 'hidden';
                 document.getElementById("titre6_8").style.visibility = 'hidden';
+                document.getElementById("replay6").style.visibility = 'hidden';
+
+
+                function replay6(){
+                    index5 = 0;
+                    document.getElementById("titre6_1").style.visibility = 'visible';
+                    document.getElementById("titre6_2").style.visibility = 'hidden';
+                    document.getElementById("titre6_3").style.visibility = 'hidden';
+                    document.getElementById("titre6_4").style.visibility = 'hidden';
+                    document.getElementById("titre6_5").style.visibility = 'hidden';
+                    document.getElementById("titre6_6").style.visibility = 'hidden';
+                    document.getElementById("titre6_7").style.visibility = 'hidden';
+                    document.getElementById("titre6_8").style.visibility = 'hidden';
+                    document.getElementById("replay6").style.visibility = 'hidden';
+                }
 
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#6")){
                         if (index5 == 0){
-                            $.fn.fullpage.setMouseWheelScrolling(false);
+
                         }
                         else if (index5 == 20){
                             document.getElementById("titre6_1").style.visibility = 'hidden';
@@ -1020,7 +1101,10 @@
                         else if (index5 == 140){
                             document.getElementById("titre6_7").style.visibility = 'hidden';
                             document.getElementById("titre6_8").style.visibility = 'visible';
-                            $.fn.fullpage.setMouseWheelScrolling(true);
+
+                        }
+                        else if (index5 == 150){
+                            document.getElementById("replay6").style.visibility = 'visible';
                         }
                         index5 ++;
                     }
@@ -1043,19 +1127,29 @@
                 <p>Finally, a new cause of death appeared on the Eastern route : vehicule accident. It is the second cause of death on this route, far behind drowning.</p> <br>
                 <img src="images/Eastern-truck.png" alt="">
             </div>
+            <a id="replay7" onclick="replay7()"><img src="images/replay.png"  class="replay"></a>
 
             <script>
                 var index6 = 0;
 
                 document.getElementById("titre7_2").style.visibility = 'hidden';
                 document.getElementById("titre7_3").style.visibility = 'hidden';
-                
+                document.getElementById("replay7").style.visibility = 'hidden';
+
+
+
+                function replay7(){
+                    index6 = 0;
+                    document.getElementById("titre7_1").style.visibility = 'visible';
+                    document.getElementById("titre7_2").style.visibility = 'hidden';
+                    document.getElementById("titre7_3").style.visibility = 'hidden';
+                    document.getElementById("replay7").style.visibility = 'hidden';
+                }
 
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#7")){
                         if (index6 == 0){
-                            $.fn.fullpage.setMouseWheelScrolling(false);
                         }
                         else if (index6 == 20){
                             document.getElementById("titre7_1").style.visibility = 'hidden';
@@ -1064,7 +1158,9 @@
                         else if (index6 == 40){
                             document.getElementById("titre7_2").style.visibility = 'hidden';
                             document.getElementById("titre7_3").style.visibility = 'visible';
-                            $.fn.fullpage.setMouseWheelScrolling(true);
+                        }
+                        else if (index6 == 50){
+                            document.getElementById("replay7").style.visibility = 'visible';
                         }
                     
                         index6 ++;
