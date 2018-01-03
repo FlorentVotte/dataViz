@@ -57,22 +57,23 @@
                 font-size: 2em;
                 font-family: 'Roboto', sans-serif;
                 color: #000000;
-                margin:0;
-                padding:0;
+                margin: 5%;
+                padding-top: 20%;
+                text-align: left;
             }
             h2{
                 font-size: 1.5em;
                 font-family: 'Open Sans', sans-serif;
                 color: #9d9c95;
-                margin:0;
-                padding:0;
+                margin: 5%;
+                text-align: left;
             }
             h3{
                 font-size: 1em;
                 font-family: 'Spectral', serif;
                 color: #525252;
-                margin:0;
-                padding:0;
+                margin: 5%;
+                text-align: left;
             }
 
             .section{
@@ -139,14 +140,14 @@
                 position: relative;
                 text-align: right;
                 padding-right: 5%;
-                top: 60%;
+                top: 70%;
             }
 
             #section1 .layer{
                 position: absolute;
                 width: 100%;
                 left: 0;
-                top: 40%;
+                top: 20%;
 
                 /*
                 * Preventing flicker on some browsers
@@ -164,17 +165,6 @@
             }
             #section1 .right {
                 text-align: left;
-
-            }
-            #section1 .right h1 {
-                margin: 5%;
-                padding-top: 20%;
-            }
-            #section1 .right h2 {
-                margin: 5%;
-            }
-            #section1 .right h3 {
-                margin: 5%;
             }
             #section1 #source {
                 position: absolute;
@@ -182,396 +172,170 @@
                 right: -2%;
             }
 
-
-            #section2 .text {
-            margin-left: 10%;
-            margin-right: 10%;
-            text-align: left;
-            font-size: 25px;
-
-
-        }
-
-            #section3 .layer{
+            #section2 .left {
+                text-align: left;
+            }
+            #section2 .image {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+                z-index: 1;
+            }
+            #section2 .layer{
                 position: absolute;
                 z-index: 4;
                 width: 100%;
                 height: 100%;
                 left: 0;
-                top: 0%;
+                top: 20%;
                 -webkit-transform: translate3d(0,0,0);
                 -ms-transform: translate3d(0,0,0);
                 transform: translate3d(0,0,0);
             }
-            #section3{
-                overflow: hidden;
-            }
-            #section3 #slide1 h1 {
+            #section2 #slide2 img {
                 position: relative;
-                font-size: 6em;
-                margin-bottom: 5%;
-                margin-top: 15%;
+                height: 40%;
             }
-            #section3 #slide1 h2 {
+            #section2 #slide4 img {
                 position: relative;
-                top: 10%;
-                color: #dcdcdc;
-            }
-            #section3 #slide1 h3 {
-                color: #dcdcdc;
-                font-size: 20px;
-                position: absolute;
-                bottom: 2%;
-                left: 2%;
-            }
-            #section3 #slide2 h1 {
-                position: relative;
-                font-size: 3em;
-                top: 10%;
-                color: #7BAABE;
-            }
-            #section3 #slide2 h2 {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                color: #989898;
-            }
-            #section3 #slide2 h3 {
-                color: #818181;
-                font-size: 20px;
-                position: absolute;
-                bottom: 2%;
-                left: 2%;
-            }
-            #section3 #slide2 img {
-                position: absolute;
-                left: 25%;
-                height: 60%;
-                bottom: 10%;
-            }
-            #section3 #slide3 h1 {
-                position: relative;
-                font-size: 6em;
-                margin-bottom: 5%;
-                margin-top: 15%;
-            }
-            #section3 #slide3 h2 {
-                position: relative;
-                top: 10%;
-                color: #dcdcdc;
-            }
-            #section3 #slide3 h3 {
-                color: #dcdcdc;
-                font-size: 20px;
-                position: absolute;
-                bottom: 2%;
-                left: 2%;
-            }
-            #section3 #slide4 h1 {
-                position: relative;
-                margin-top: 5%;
-                color: #7BAABE;
-            }
-            #section3 #slide4 h3 {
-                color: #818181;
-                font-size: 20px;
-                position: absolute;
-                bottom: 2%;
-                left: 2%;
-            }
-            #section3 #slide4 img {
-                position: absolute;
                 width: 50%;
-                left: 25%;
-                bottom: 2%;
+
+            }
+            #section2 .right h1 {
+                padding-top: 0%;
             }
 
-            #section4 .europe {
+            #section3 .image {
                 position: absolute;
-                top: 0%;
-                right: 0%;
+                bottom: 0;
                 width: 100%;
+                left: 0;
                 z-index: 1;
             }
-            #section4 #slide1_4 {
+            #section3 .left h1 {
+                padding-top: 5%;
+            }
+
+            #section4 .left h1 {
+                padding-top: 10%;
+            }
+            #section4 .right h1 {
+                padding-top: 0%;
+            }
+            #section4 .image {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+                z-index: 1;
+            }
+
+            #section5 .left h1 {
+                padding-top: 10%;
+            }
+            #section5 .right h1 {
+                padding-top: 0%;
+            }
+            #section5 .image {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+                z-index: 1;
+            }
+
+            #section6 h1 {
+                margin: 2%;
+                padding-top: 0%;
+            }
+            #section6 h2 {
+                margin: 2%;
+                padding-top: 0%;
+            }
+
+            #section7 .image{
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 5%;
+            }
+            #section7 h1 {
+                padding-top: 10%;
+            }
+            #section7 .titre7 {
+                position: absolute;
+                width: 100%;
+                left: 0;
+            }
+            #section7 .titre7 h2{
+                text-align: center;
+            }
+
+            #section8 .image{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+                z-index: 1;
+            }
+            #section8 .right h1 {
+                padding-top: 5%;
+            }
+
+            #section9 .background {
+                z-index: -1;
+            }
+            #section9 h1 {
+                padding-top: 0%;
+                margin-left: 25%;
+                text-align: right;
+            }
+            #section9 h3 {
+                text-align: justify;
+            }
+
+            #section10 #textMap {
                 position: absolute;
                 top:0;
-                height: 100%;
-                width: 100%;
-                z-index: 99;
-            }
-            #section4 #slide1_4 img {
-                position: absolute;
-                bottom: 0%;
-                left: 0%;
-            }
-            #section4 #slide2_4 {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                margin-bottom: 4%;
-                z-index: 99;
-            }
-            #section4 #slide2_4 h1 {
-                position: relative;
-                bottom:0;
-                margin-left: 4%;
-                text-align: left;
-            }
-            #section4 #slide3_4 {
-                position: absolute;
-                width: 100%;
-                margin-bottom: 4%;
-                bottom: 0;
-                z-index: 99;
-            }
-            #section4 #slide3_4 h1 {
-                position: relative;
-                bottom:0;
-                margin-left: 4%;
-                text-align: left;
-            }
-            #section4 #slide4_4 {
-                position: absolute;
-                top: 35%;
-                width: 100%;
-                z-index: 99;
-            }
-            #section4 #slide5_4 {
-                position: absolute;
-                top: 45%;
-                height: 40%;
-                width: 100%;
-            }
-            #section4 #slide5_4 h1 {
-                font-size: 6em;
-            }
-            #section4 #slide6_4 {
-                position: absolute;
-                top: 15%;
-                width: 100%;
-            }
-            #section4 #slide6_4 h1 {
-                font-size: 6em;
-            }
-
-
-            #section5 p {
-                font-size: 20px;
-                margin-left: 5%;
-                margin-right: 5%;
-                margin-bottom: 1%;
-                margin-top: 2%;
-                text-align: left;
-            }
-            #section5 h5 {
-                margin-left: 5%;
-                margin-right: 5%;
-                margin-bottom: -1%;
-                margin-top: -2%;
-            }
-
-            #section6 h3 {
-                position: absolute;
-                width: 90%;
-                top: 5%;
-                margin-left: 5%;
-                margin-right: 5%;
-            }
-            #section6 .layer{
-                position: absolute;
-                width: 100%;
-                height: 80%;
-                left: 0;
-                top: 20%;
-                -webkit-transform: translate3d(0,0,0);
-                -ms-transform: translate3d(0,0,0);
-                transform: translate3d(0,0,0);
-            }
-            #section6 .layer img {
-                margin-top: -13%;
-                width: 50%;
-            }
-            #section6 .layer p {
-                text-align: center;
-                color: #ffffff;
-                font-size: 1.5em;
-                margin-left: 5%;
-                margin-right: 5%;
-
-            }
-
-            #section7 h3 {
-                position: absolute;
-                width: 90%;
-                top: 5%;
-                margin-left: 5%;
-                margin-right: 5%;
-            }
-            #section7 .layer{
-                position: absolute;
-                width: 100%;
-                height: 80%;
-                left: 0;
-                top: 20%;
-                -webkit-transform: translate3d(0,0,0);
-                -ms-transform: translate3d(0,0,0);
-                transform: translate3d(0,0,0);
-            }
-            #section7 .layer img {
-                height: 80%;
-                margin-top: 0%;
-            }
-            #section7 .layer p {
-                text-align: center;
-                color: #ffffff;
-                font-size: 1.5em;
-                margin-left: 5%;
-                margin-right: 5%;
-            }
-
-            #section8 h5 {
-                margin-left: 5%;
-                margin-right: 5%;
-            }
-            #section8 h3 {
-                position: absolute;
-                width: 90%;
-                top: 0%;
-                margin-left: 5%;
-                margin-right: 5%;
-                margin-top: 10%;
-            }
-
-            #section9 .image{
-                position: absolute;
-                height: 70%;
-                width: 60%;
-                left: 20%;
-                top: 30%;
-                -webkit-transform: translate3d(0,0,0);
-                -ms-transform: translate3d(0,0,0);
-                transform: translate3d(0,0,0);
-            }
-            #section9 #titre91 {
-                position: absolute;
-                width: 100%;
-                left: 0;
-                top: 10%;
-
-                -webkit-transform: translate3d(0,0,0);
-                -ms-transform: translate3d(0,0,0);
-                transform: translate3d(0,0,0);
-            }
-            #section9 .titre9 {
-                position: absolute;
-                width: 100%;
-                left: 0;
-                top: 30%;
-
-                -webkit-transform: translate3d(0,0,0);
-                -ms-transform: translate3d(0,0,0);
-                transform: translate3d(0,0,0);
-            }
-            #section9 h4 {
-                color: #ffffff;
-                font-size: 1.5em;
-            }
-
-            #section10 h3 {
-                text-align: center;
-                padding-left: 5%;
-                padding-right: 5%;
-                color: #ffffff;
-            }
-            #section10 img {
-                height: 50%;
-                width: 50%;
-                position: absolute;
-                bottom: 0%;
-                right: 25%;
-                z-index: 1;
-            }
-            #section10 .titreslide10 h3{
-                color: #343434;
-                position: absolute;
-                top: 5%;
-                height: 20%;
-                z-index: 2;
-            }
-            #section10 .titreslide10-2 h3 {
-                font-size: 120%;
-                position: absolute;
-                top: 25%;
-                width: 90%;
-                z-index: 3;
-             }
-
-            #section11 h4 {
-                text-align: left;
-                padding-left: 5%;
-                padding-right: 5%;
-                color: #ffffff;
-                font-size: 1.5em;
-            }
-            #section11 #titre111{
-                position: absolute;
-                top:5%;
                 height: 30%;
-
+                width: 100%;
             }
+            #section10 h1 {
+                padding-top: 0;
+                margin: 0;
+                margin-left: 5%;
+                margin-right: 5%;
+
+                margin-top: 3%;
+            }
+            #section10 h2 {
+                padding-top: 0;
+                margin: 0;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
             #section11 .image {
+                z-index: -1;
                 position: absolute;
-                left: 25%;
-                bottom: 5%;
-                width: 50%;
-             }
-
-
-            #section12 h3 {
-                color: white;
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-            #section12 ul {
-                list-style-type: disc;
-                list-style-position: inside;
-                text-align: left;
-                font-size: 20px;
-                padding-left: 15%;
-                padding-right: 5%;
-            }
-
-            #infoMenu li a {
-                color: #fff;
-            }
-
-
-            video::-webkit-media-controls {
-                display:none !important;
-            }
-            .text a span{
-                display:none;
-                color:#fff;
-                background:rgba(51,51,51,0.75);
-                text-align:center;
-                position: absolute;
-                font-size: 20%;
+                bottom: 0;
                 width: 100%;
                 left: 0;
-                top: 10%;
-                -webkit-transform: translate3d(0,0,0);
-                -ms-transform: translate3d(0,0,0);
-                transform: translate3d(0,0,0);
-                z-index:10;
             }
-            .text a {
-                display: inline-block;
-                font-style: italic;
+            #section11 .left {
+                background-color: rgba(1, 1, 1, 0);
             }
-            .text a:hover span {
-                display:block;
+            #section11 h1 {
+                padding-top: 0;
             }
+            #section11 h3 {
+                text-align: justify;
+            }
+
+
+
+
             .graph {
                 position: relative;
                 left: 15%;
@@ -584,19 +348,6 @@
                 left: 0px;
                 width: 100%;
             }
-            .text_up_to_maps {
-                position: absolute;
-                top: 0%;
-                height: 30%;
-                width: 100%;
-            }
-            .text_up_to_maps h1 {
-                text-align:center;
-                padding: 5%;
-            }
-
-
-
 
         </style>
 
@@ -635,9 +386,6 @@
                 <div id="titre3" class="layer">
                     <h1>Their journey was a migration.</h1>
                 </div>
-
-
-
             </div>
             <div class="right">
 
@@ -693,49 +441,34 @@
         </div>
 
         <div class="section" id="section2">
-            <div class="text">
-                <h2>Their journey was a migration</h2>
-                <br>
-                <p>
-                    <b>Migrant : </b>  Any person who is moving or has moved across an international border or within:
-                </p> <br>
-                <p id="paragraphdef">
-                    <ul>
-                      <li> A State away from his/her habitual place of residence, regardless of the person’s legal status. </li>
-                      <li> Whether the movement is voluntary or involuntary. </li>
-                      <li> What the causes for the movement are; or what the length of the stay is. </li>
-                    </ul>
-                    <br>
-                    It includes <a id="adef" href="https://www.iom.int/key-migration-terms" target="_blank">migration </a> of <b>refugees</b>, <b>displaced persons</b>, <b>economic migrants</b>, and persons moving for other purposes, including family reunification.
-                </p>
-            </div>
-        </div>
+            <img src="images/V2/Slide%203/2_bagages.png" class="image">
 
-        <div class="section" id="section3">
-            <div id="slide1" class="layer">
-                <h2>By the end of 2016,</h2>
-                <h1>65.6 million</h1>
-                <h2>individuals were forcibly<br>displaced worldwide</h2>
-                <h3>Source: UNHCR</h3>
+            <div class="left">
+                <h1>They were forced to flee their home in Syria …</h1>
+                <h2>Because of the civil war raging there since march 2011.</h2>
+                <h3>They managed to sell their house in Damascus, but for a fraction of its value. They took all of their savings and managed to get to Beirut, Lebanon. </h3>
             </div>
-            <div id="slide2" class="layer">
-                <h1>This is equivalent to the<br>population of the UK</h1>
-                <img src="images/V1/UK_bis.png" alt="uk">
-                <h2>65.6 million</h2>
-                <h3>Source: UK Office for National Statistics</h3>
+
+            <div class="right">
+                <div id="slide1" class="layer">
+                    <h2>By the end of 2016,</h2>
+                    <h1>65.6 million</h1>
+                    <h2>individuals were forcibly<br>displaced worldwide</h2>
+                </div>
+                <div id="slide2" class="layer">
+                    <h2>This is equivalent to the<br>population of the UK</h2>
+                    <img src="images/V2/Slide%203/uk.png" alt="uk">
+                </div>
+                <div id="slide3" class="layer">
+                    <h2>By the end of 2016,<br>there were also</h2>
+                    <h1>22.5 million</h1>
+                    <h2>refugees in the world</h2>
+                </div>
+                <div id="slide4" class="layer">
+                    <h2>This is more than 10 times<br>the population of Paris</h2>
+                    <img src="images/V2/Slide%203/paris.png" alt="paris">
+                </div>
             </div>
-            <div id="slide3" class="layer">
-                <h2>By the end of 2016,<br>there were also</h2>
-                <h1>22.5 million</h1>
-                <h2>refugees in the world</h2>
-                <h3>Source: UNHCR</h3>
-            </div>
-            <div id="slide4" class="layer">
-                <h1>This is more than 10 times<br>the population of Paris</h1>
-                <img src="images/V1/Paris_bis.png" alt="paris">
-                <h3>Source: INSEE</h3>
-            </div>
-            <a id="replay3" onclick="replay3()"><img src="images/V1/replay.png" class="replay"></a>
 
             <script>
                 var index3 = 0;
@@ -743,42 +476,26 @@
                 document.getElementById("slide2").style.visibility = 'hidden';
                 document.getElementById("slide3").style.visibility = 'hidden';
                 document.getElementById("slide4").style.visibility = 'hidden';
-                document.getElementById("replay3").style.visibility = 'hidden';
 
-                function replay3(){
-                    index3 = 0;
-                    document.getElementById("slide1").style.visibility = 'visible';
-                    document.getElementById("slide2").style.visibility = 'hidden';
-                    document.getElementById("slide3").style.visibility = 'hidden';
-                    document.getElementById("slide4").style.visibility = 'hidden';
-                    document.getElementById("replay3").style.visibility = 'hidden';
-                    document.getElementById("section3").style.backgroundColor = '#7BAABE';
-                }
 
                 window.setInterval(function(){
 
-                    if ((window.location.hash==="#3")){
-                        if (index3 ==0){
-
+                    if ((window.location.hash==="#2")){
+                        if (index3 % 100 ==0){
+                            document.getElementById("slide1").style.visibility = 'visible';
+                            document.getElementById("slide4").style.visibility = 'hidden';
                         }
-                        else if (index3 ==20){
+                        else if (index3 % 100 == 20){
                             document.getElementById("slide2").style.visibility = 'visible';
                             document.getElementById("slide1").style.visibility = 'hidden';
-                            document.getElementById("section3").style.backgroundColor = '#FFFFFF';
                         }
-                        else if (index3 ==40){
+                        else if (index3 % 100 == 40){
                             document.getElementById("slide3").style.visibility = 'visible';
                             document.getElementById("slide2").style.visibility = 'hidden';
-                            document.getElementById("section3").style.backgroundColor = '#7BAABE';
                         }
-                        else if (index3 == 60){
+                        else if (index3 % 100 == 60){
                             document.getElementById("slide4").style.visibility = 'visible';
                             document.getElementById("slide3").style.visibility = 'hidden';
-                            document.getElementById("section3").style.backgroundColor = '#FFFFFF';
-                            document.getElementById("replay3").style.visibility = 'visible';
-                        }
-                        else if (index6 == 70){
-                            document.getElementById("replay3").style.visibility = 'visible';
                         }
                         index3 ++;
                     }
@@ -786,116 +503,69 @@
             </script>
         </div>
 
+        <div class="section" id="section3">
+            <img src="images/V2/Slide%204/4_flechesA.png" class="image">
+
+            <div class="left">
+                <h1>The family decided to continue their journey towards Europe.</h1>
+                <h2>Because they dreamt of a safer and brighter future for their children, the parents,
+                    Ammar and Dima, decided to continue their migration. </h2>
+                <h3>In order to get to Europe, just like other migrants coming from Syria and the Middle East,
+                    our family had to make a decision between the two Mediterranean migration routes.</h3>
+            </div>
+            <img src="images/V2/Slide%204/maps.png" alt="map" width="53.6%" style="z-index: -1;position: absolute;bottom: 0;right: 0;">
+            <div class="right">
+
+                <h1 style="position: absolute; bottom: 2%; font-size: 1.5em;">The two possible routes : Central & Eastern</h1>
+            </div>
+
+        </div>
+
         <div class="section" id="section4">
-            <img src="images/V1/Europecoupe.png" id="europeC" alt="EU" class="europe">
-            <img src="images/V1/Europelarge.png" id="europeL" alt="EU" class="europe" style="margin-top: -20%">
-            <div id="slide1_4" class="layer">
-                <img src="images/V1/centmille.png" alt="centmille" style="z-index: 90">
-            </div>
-            <div id="slide2_4" class="layer">
-                <h1>In 2017,</h1>
-                <h1>between</h1>
-                <h1>January and July only</h1>
-            </div>
-            <div id="slide3_4" class="layer">
-                <h1>more than</h1>
-                <h1>100 000 people</h1>
-            </div>
-            <div id="slide4_4" class="layer">
-                <h1>Successfully</h1>
-                <h1>reached Europe</h1>
-            </div>
-            <div id="slide5_4" class="layer">
-                <h1>by sea.</h1>
-            </div>
-            <div id="slide6_4" class="layer">
-                <h1>But what about</h1>
-                <h1>the ones</h1>
-                <h1>that never arrived</h1>
-                <h1>to the other shore?</h1>
+            <img src="images/V2/Slide%205/5_central.png" class="image">
+
+            <div class="left">
+                <h1>Taking the Central route would be the most common solution.</h1>
+                <h2>But is this a risk our family will take ?</h2>
+                <h3>They could take the <b>Central route</b> and make the journey by sea from Egypt or Libya.
+                    This route is the cheapest, therefore the most travelled through. However, the living conditions
+                    are poor and the journey often deadly as travelling by sea is very risky.</h3>
             </div>
 
-            <a id="replay4" onclick="replay4()"><img src="images/V1/replay.png" class="replay"></a>
-
-            <script>
-                var index4 = 0;
-
-                document.getElementById("slide2_4").style.visibility = 'hidden';
-                document.getElementById("slide3_4").style.visibility = 'hidden';
-                document.getElementById("slide4_4").style.visibility = 'hidden';
-                document.getElementById("slide5_4").style.visibility = 'hidden';
-                document.getElementById("slide6_4").style.visibility = 'hidden';
-                document.getElementById("europeL").style.visibility = 'hidden';
-                document.getElementById("replay4").style.visibility = 'hidden';
-                document.getElementById("section4").style.background = 'url(images/FondMer.png)';
-                document.getElementById("section4").style.backgroundSize = '100%';
-                document.getElementById("section4").style.backgroundColor = '#607688';
-
-
-                function replay4(){
-                    index4 = 0;
-
-                    document.getElementById("slide2_4").style.visibility = 'hidden';
-                    document.getElementById("slide3_4").style.visibility = 'hidden';
-                    document.getElementById("slide4_4").style.visibility = 'hidden';
-                    document.getElementById("slide5_4").style.visibility = 'hidden';
-                    document.getElementById("slide6_4").style.visibility = 'hidden';
-                    document.getElementById("europeL").style.visibility = 'hidden';
-                    document.getElementById("replay4").style.visibility = 'hidden';
-                    document.getElementById("section4").style.background = 'url(images/FondMer.png)';
-                    document.getElementById("section4").style.backgroundSize = '100%';
-                    document.getElementById("section4").style.backgroundColor = '#607688';
-                    document.getElementById("slide1_4").style.visibility = 'visible';
-                    document.getElementById("europeC").style.visibility = 'visible';
-                }
-
-                window.setInterval(function(){
-
-                    if ((window.location.hash==="#4")){
-                        if (index4 ==0){
-
-                        }
-                        else if (index4 ==20){
-                            document.getElementById("slide2_4").style.visibility = 'visible';
-                            document.getElementById("slide1_4").style.visibility = 'hidden';
-                        }
-                        else if (index4 ==40){
-                            document.getElementById("slide3_4").style.visibility = 'visible';
-                            document.getElementById("slide2_4").style.visibility = 'hidden';
-                        }
-                        else if (index4 ==60){
-                            document.getElementById("slide4_4").style.visibility = 'visible';
-                            document.getElementById("europeL").style.visibility = 'visible';
-                            document.getElementById("europeC").style.visibility = 'hidden';
-                            document.getElementById("slide3_4").style.visibility = 'hidden';
-                        }
-                        else if (index4 ==80){
-                            document.getElementById("slide5_4").style.visibility = 'visible';
-                            document.getElementById("europeL").style.visibility = 'hidden';
-                            document.getElementById("slide4_4").style.visibility = 'hidden';
-                        }
-                        else if (index4 == 90){
-                            document.getElementById("section4").style.background = 'url(images/FondHommes.png)';
-                            document.getElementById("section4").style.backgroundColor = '#607688';
-                            document.getElementById("slide6_4").style.visibility = 'visible';
-                            document.getElementById("slide5_4").style.visibility = 'hidden';
-                            document.getElementById("replay4").style.visibility = 'visible';
-
-                        }
-                        index4 ++;
-                    }
-                }, 500);
-            </script>
+            <div class="right">
+                <h1>On this route, migrants will have to risk the main cause of death by far: <u>drowning</u>.</h1>
+            </div>
+            <img src="images/V2/Slide%205/causes.png" alt="" style="position: absolute; height: 80%; bottom: 0; right: 6.5%;">
         </div>
 
         <div class="section" id="section5">
-            <h5>Nowadays, travelling through the Mediterranean is the most dangerous path in the world for migrants</h5>
-            <p>For those migrants, mainly coming from Syria and the Middle East trying to reach Western Europe, there is a choice to make between two irregular migration routes : the Central or the Eastern route.</p>
+            <img src="images/V2/Slide%206/6_eastern.png" class="image">
+
+            <div class="left">
+                <h1>Taking the Eastern route would be less risky.</h1>
+                <h2>But can they afford it ?</h2>
+                <h3>They could choose to travel through Turkey and reach Europe by land with the <b>Eastern route</b>.
+                    This road is less dangerous because they could avoid crossing by boat, but the journey by
+                    land is more expensive. There is also a greater risk to get caught crossing by land.</h3>
+            </div>
+
+            <div class="right">
+                <h1>Although many migrants travel through this route by land, <u>drowning</u> remains the main cause of death. </h1>
+                <h2>Vehicle accidents are the second identified cause of death.</h2>
+            </div>
+            <img src="images/V2/Slide%206/causes.png" alt="" style="position: absolute; height: 60%; bottom: 0; right: 6.5%;">
+        </div>
+
+        <div class="section" id="section6">
+            <img src="images/V2/Slide%207/top.png" style="position: absolute; width: 100%; top: 0; left: 0; z-index: -1;">
+            <img src="images/V2/Slide%207/bottom.png" style="position: absolute; width: 100%; bottom: 0; left: 0; z-index: -1;">
+            <h1>Nowadays, travelling through the Mediterranean is one of the most dangerous paths
+                in the world for migrants.</h1>
+            <h2>Despite an increase in migrant flows through the Eastern route since 2015,
+                the Central route remains the deadliest. Overall, thousands of migrants lose their lives at sea each year.</h2>
             <div class="graph">
                 <canvas id="canvas"></canvas>
             </div>
-            <p>Despite the increase in migrant flows through the eastern Mediterranean since 2015, the central Mediterranean remains the more deadly route.
-                Let us take a look at the dangers facing migrants on each of those routes.</p>
 
             <script>
                     var color = Chart.helpers.color;
@@ -951,7 +621,7 @@
                             "Jul 2017", "Aug 2017", "Sep 2017", "Oct 2017", "Nov 2017"],
                         datasets: [{
                             label: 'Total',
-                            backgroundColor: color("#181661").alpha(0.4).rgbString(),
+                            backgroundColor: color("#dcdcdc").alpha(0.4).rgbString(),
                             borderColor: color("#3c3f41").alpha(1).rgbString(),
                             borderWidth: 2,
                             data: [12]
@@ -962,7 +632,7 @@
                             data: [0] }, {
                             label: 'Easter and Western route',
                             backgroundColor: color("#ffffff").alpha(0).rgbString(),
-                            borderColor: color("#c57800").alpha(1).rgbString(),
+                            borderColor: color("#969696").alpha(1).rgbString(),
                             borderWidth: 2,
                             data: [12]}
 
@@ -1005,6 +675,7 @@
                                     }],
                                     yAxes: [{
                                         display: true,
+                                        position: 'right',
                                         scaleLabel: {
                                             display: true,
                                             labelString: 'Nb dead and missing'
@@ -1016,7 +687,7 @@
                     };
 
                     var graph = window.setInterval(function(){
-                        if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#5") ){
+                        if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#6") ){
                             barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
                             barChartData.datasets[1].data.push(dataArray.datasets[1].data.shift());
                             barChartData.datasets[2].data.push(dataArray.datasets[2].data.shift());
@@ -1029,181 +700,124 @@
                 </script>
         </div>
 
-        <div class="section" id="section6">
-            <h3>First, let us focus on the Central Mediterranean route : 
-                <br>the most taken and dealiest one.</h3>
-
-            <div id="titre6_1" class="layer">
-                <p>Throughout their journey, migrants on the Central Mediterranean route will face many dangers that
-                    may lead to their death.</p> <br>
-                <img src="images/V1/1-Migrants-boat.png" alt="">
-            </div>
-            <div id="titre6_2" class="layer">
-            <p>Since 2014, 2844 migrants have drowned on this route and 91 are presumed drowned. Drowning is
-                therefore the main cause of death, with an overwhelming majority.</p> <br>
-                <img src="images/V1/2-Migrants-boat-drowning.png" alt="">
-            </div>
-            <div id="titre6_3" class="layer">
-                <p>The cause of 599 deaths still remains unknown or unspecified, due to the difficulty to gather
-                    information and find bodies.</p> <br>
-                <img src="images/V1/3-Migrants-boat-unknown.png" alt="">
-            </div>
-            <div id="titre6_4" class="layer">
-                <p>179 migrants died of suffocation or asphyxiation.</p> <br> <br>
-                <img src="images/V1/4-Migrants-boat-suffocation-asph.png" alt="">
-            </div>
-            <div id="titre6_5" class="layer">
-                <p>62 died of hyperthermia or burnings.</p> <br> <br>
-                <img src="images/V1/5-Migrants-boat-burned.png" alt="">
-            </div>
-            <div id="titre6_6" class="layer">
-                <p>57 died of hypothermia.</p> <br> <br>
-                <img src="images/V1/6-Migrants-boat-hypothermia.png" alt="">
-            </div>
-            <div id="titre6_7" class="layer">
-                <p>57 were crushed.</p> <br> <br>
-                <img src="images/V1/7-Migrants-boat-crushed.png" alt="">
-            </div>
-            <div id="titre6_8" class="layer">
-                <p>Finally, about 70 others died of less frequent causes, mostly linked to the harsh conditions of
-                    their migration : starvation, dehydration, violence on board, lack of access to medical aid...</p>
-                <img src="images/V1/8-Migrants-boat-all.png" alt="">
-            </div>
-            <a id="replay6" onclick="replay6()"><img src="images/V1/replay.png" class="replay"></a>
-
-
-            <script>
-                var index5 = 0;
-
-                document.getElementById("titre6_2").style.visibility = 'hidden';
-                document.getElementById("titre6_3").style.visibility = 'hidden';
-                document.getElementById("titre6_4").style.visibility = 'hidden';
-                document.getElementById("titre6_5").style.visibility = 'hidden';
-                document.getElementById("titre6_6").style.visibility = 'hidden';
-                document.getElementById("titre6_7").style.visibility = 'hidden';
-                document.getElementById("titre6_8").style.visibility = 'hidden';
-                document.getElementById("replay6").style.visibility = 'hidden';
-
-
-                function replay6(){
-                    index5 = 0;
-                    document.getElementById("titre6_1").style.visibility = 'visible';
-                    document.getElementById("titre6_2").style.visibility = 'hidden';
-                    document.getElementById("titre6_3").style.visibility = 'hidden';
-                    document.getElementById("titre6_4").style.visibility = 'hidden';
-                    document.getElementById("titre6_5").style.visibility = 'hidden';
-                    document.getElementById("titre6_6").style.visibility = 'hidden';
-                    document.getElementById("titre6_7").style.visibility = 'hidden';
-                    document.getElementById("titre6_8").style.visibility = 'hidden';
-                    document.getElementById("replay6").style.visibility = 'hidden';
-                }
-
-                window.setInterval(function(){
-
-                    if ((window.location.hash==="#6")){
-                        if (index5 == 0){
-
-                        }
-                        else if (index5 == 20){
-                            document.getElementById("titre6_1").style.visibility = 'hidden';
-                            document.getElementById("titre6_2").style.visibility = 'visible';
-                        }
-                        else if (index5 == 40){
-                            document.getElementById("titre6_2").style.visibility = 'hidden';
-                            document.getElementById("titre6_3").style.visibility = 'visible';
-                        }
-                        else if (index5 == 60){
-                            document.getElementById("titre6_3").style.visibility = 'hidden';
-                            document.getElementById("titre6_4").style.visibility = 'visible';
-                        }
-                        else if (index5 == 80){
-                            document.getElementById("titre6_4").style.visibility = 'hidden';
-                            document.getElementById("titre6_5").style.visibility = 'visible';
-                        }
-                        else if (index5 == 100){
-                            document.getElementById("titre6_5").style.visibility = 'hidden';
-                            document.getElementById("titre6_6").style.visibility = 'visible';
-                        }
-                        else if (index5 == 120){
-                            document.getElementById("titre6_6").style.visibility = 'hidden';
-                            document.getElementById("titre6_7").style.visibility = 'visible';
-                        }
-                        else if (index5 == 140){
-                            document.getElementById("titre6_7").style.visibility = 'hidden';
-                            document.getElementById("titre6_8").style.visibility = 'visible';
-
-                        }
-                        else if (index5 == 150){
-                            document.getElementById("replay6").style.visibility = 'visible';
-                        }
-                        index5 ++;
-                    }
-                }, 500);
-            </script>
-        </div>
-
         <div class="section" id="section7">
-            <h3>The Eastern route, increasingly used by migrants since 2015, is a lot less dangerous but still very deadly.</h3>
 
-            <div id="titre7_1" class="layer">
-                <p>The most common cause of death on this path remains <b>drowning</b>. But for each drowned migrant on the Eastern route, 3 die drowning on the Central route.</p> <br>
-                <img src="images/V1/Eastern-boat.png" alt="">
+            <div class="left">
+                <h1>They had to cross through the Central route because they couldn’t afford to travel by land.</h1>
+                <h2>They were separated along the way, like so many other families before them.</h2>
+                <h3>Upon the family’s arrival in Italy, two people were missing : Ammar and his sister Haya.</h3>
+                <img src="images/V2/Slide%208/8_missing.png" class="image">
             </div>
-            <div id="titre7_2" class="layer">
-                <p>There are also much less deaths whose cause remain unknown or unspecified, since the bodies are more easily found and information collected on the Eastern route.</p> <br>
-                <img src="images/V1/Eastern-unknown.png" alt="">
-            </div>
-            <div id="titre7_3" class="layer">
-                <p>Finally, a new cause of death appeared on the Eastern route : vehicule accident. It is the second cause of death on this route, far behind drowning.</p> <br>
-                <img src="images/V1/Eastern-truck.png" alt="">
-            </div>
-            <a id="replay7" onclick="replay7()"><img src="images/V1/replay.png" class="replay"></a>
+            <div class="right">
+                <h1>The weight of death and loss on those migration routes is crushing.</h1>
 
+                <div id="titre92" class="titre7">
+                    <h2> Suppose a boat of 100 persons  </h2>
+                </div>
+                <div id="titre93" class="titre7">
+                    <h2> At their arrival, 20 will be missing</h2>
+                </div>
+                <div id="titre94" class="titre7">
+                    <h2>19 will be dead</h2>
+                </div>
+                <img src="images/V1/mig0.png" id="mig0" alt="mig0" class="image">
+                <img src="images/V1/mig1.png" id="mig1" alt="mig1" class="image">
+                <img src="images/V1/mig2.png" id="mig2" alt="mig2" class="image">
+
+
+
+            </div>
             <script>
-                var index6 = 0;
+                var index2 = 0;
 
-                document.getElementById("titre7_2").style.visibility = 'hidden';
-                document.getElementById("titre7_3").style.visibility = 'hidden';
-                document.getElementById("replay7").style.visibility = 'hidden';
+                document.getElementById("mig1").style.visibility = 'hidden';
+                document.getElementById("mig2").style.visibility = 'hidden';
+                document.getElementById("titre93").style.visibility = 'hidden';
+                document.getElementById("titre94").style.visibility = 'hidden';
 
-
-
-                function replay7(){
-                    index6 = 0;
-                    document.getElementById("titre7_1").style.visibility = 'visible';
-                    document.getElementById("titre7_2").style.visibility = 'hidden';
-                    document.getElementById("titre7_3").style.visibility = 'hidden';
-                    document.getElementById("replay7").style.visibility = 'hidden';
-                }
 
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#7")){
-                        if (index6 == 0){
+                        if (index2%40==0){
+                            document.getElementById("titre94").style.visibility = 'hidden';
+                            document.getElementById("titre92").style.visibility = 'visible';
+                            document.getElementById("mig2").style.visibility = 'hidden';
+                            document.getElementById("mig0").style.visibility = 'visible';
                         }
-                        else if (index6 == 20){
-                            document.getElementById("titre7_1").style.visibility = 'hidden';
-                            document.getElementById("titre7_2").style.visibility = 'visible';
+                        else if (index2%40 ==20){
+                            document.getElementById("mig1").style.visibility = 'visible';
+                            document.getElementById("mig0").style.visibility = 'hidden';
+                            document.getElementById("titre92").style.visibility = 'hidden';
+                            document.getElementById("titre93").style.visibility = 'visible';
                         }
-                        else if (index6 == 40){
-                            document.getElementById("titre7_2").style.visibility = 'hidden';
-                            document.getElementById("titre7_3").style.visibility = 'visible';
+                        else if (index2%40 ==30){
+                            document.getElementById("mig2").style.visibility = 'visible';
+                            document.getElementById("mig1").style.visibility = 'hidden';
+                            document.getElementById("titre93").style.visibility = 'hidden';
+                            document.getElementById("titre94").style.visibility = 'visible';
                         }
-                        else if (index6 == 50){
-                            document.getElementById("replay7").style.visibility = 'visible';
-                        }
-                    
-                        index6 ++;
+                        index2 ++;
                     }
-                }, 500);
+                }, 400);
             </script>
+
         </div>
 
         <div class="section" id="section8">
-            <div class="text_up_to_maps">
-                <h5>Those are only two of the most dangerous migration routes in the world.</h5>
-                <br><h3>Take a look at the other deadly routes across the globe.</h3>
+            <img src="images/V2/Slide%209%20/9_callA.png" class="image">
+            <div class="left">
+                <h1>A few months after they arrived in Europe, the family got the news: Ammar was dead.</h1>
+                <h2>It took some time. </h2>
+                <h3>But it was only made possible thanks to the initiative of hundreds of aid workers, associations,
+                    journalists, doctors, coastguards… who work hard to gather informations that are incredibly hard
+                    to collect.</h3>
             </div>
+            <div class="right">
+                <h1>Collecting data about missing migrants is an almost impossible task. </h1>
+                <h2>But the stakes are high. Because families around the world need closure,
+                    and the world needs to open its eyes on the issue.</h2>
+            </div>
+
+        </div>
+
+        <div class="section" id="section9">
+            <img src="images/V2/Slide%2010/10_background.png" class="background">
+            <div style="position: absolute; top: 0%">
+                <h1>The Missing Migrants Project tracks deaths of migrants, including refugees and asylum-seekers,
+                    who have gone missing along mixed migration routes worldwide.</h1>
+                <h2>Our data comes from this project, which was created by the International Organisation for
+                    Migration to find out what happened to migrants like Ammar.</h2>
+            </div>
+
+            <div style="width: 50%; height: 40%; bottom: 0%; left: 0; position: absolute;">
+                <h3>The research behind this project began with the October 2013 tragedies, when at least
+                    368 individuals died in two shipwrecks near the Italian island of Lampedusa. Since then,
+                    Missing Migrants Project has developed into an important hub and advocacy source of information
+                    that media, researchers, and the general public access for the latest information.
+                    With a count surpassing 60,000 over the last two decades, IOM calls on all the world’s
+                    governments to address what it describes as “an epidemic of crime and abuse."
+                </h3>
+            </div>
+
+            <div style="width: 50%;height: 40%;left:50%; bottom: 0%; position: absolute;">
+                <h3>Since 2014, the IOM has recorded the deaths of nearly 25,000 migrants. This figure is a
+                    significant indicator of the human toll of unsafe migration, yet fails to capture the true
+                    number of people who have died or gone missing during migration.
+                </h3>
+                <h3>To know more about this initiative visit : <a target="_blank" href="https://missingmigrants.iom.int/about">https://missingmigrants.iom.int/about</a></h3>
+            </div>
+
+        </div>
+
+        <div class="section" id="section10">
+            <div id="textMap">
+                <h1>And the story we told you is only about two of the most dangerous migration routes in the world.</h1>
+                <h2>Take a look at the other deadly routes across the globe. Everywhere, there are more stories like this one to be told.</h2>
+            </div>
+
+            <div id="mapdiv" class="maps" style="height: 70%;"></div>
+
             <script>
                 var map;
 
@@ -1345,144 +959,50 @@
 
             </script>
 
-            <div id="mapdiv" class="maps" style="height: 70%;"></div>
-
-
-        </div>
-
-        <div class="section" id="section9">
-            <div id="titre91" class="layer">
-                <h3>Now, let’s go back to the family we were following. <br />This tragic journey is unfortunately only one among many.</h3>
-            </div>
-            <div id="titre92" class="titre9">
-                <h4> Suppose a boat of 100 persons  </h4>
-            </div>
-            <div id="titre93" class="titre9">
-                <h4> At their arrival,
-                 <br>20 will be missing</h4>
-            </div>
-            <div id="titre94" class="titre9">
-                <h4>19 will be dead</h4>
-            </div>
-            <img src="images/V1/mig0.png" id="mig0" alt="mig0" class="image">
-            <img src="images/V1/mig1.png" id="mig1" alt="mig1" class="image">
-            <img src="images/V1/mig2.png" id="mig2" alt="mig2" class="image">
-
-
-            <script>
-                var index2 = 0;
-
-                document.getElementById("mig1").style.visibility = 'hidden';
-                document.getElementById("mig2").style.visibility = 'hidden';
-                document.getElementById("titre93").style.visibility = 'hidden';
-                document.getElementById("titre94").style.visibility = 'hidden';
-
-
-                window.setInterval(function(){
-
-                    if ((window.location.hash==="#9")){
-                        if (index2==0){
-                            $.fn.fullpage.setMouseWheelScrolling(false);
-                        }
-                        else if (index2 ==25){
-                            document.getElementById("mig1").style.visibility = 'visible';
-                            document.getElementById("mig0").style.visibility = 'hidden';
-                            document.getElementById("titre92").style.visibility = 'hidden';
-                            document.getElementById("titre93").style.visibility = 'visible';
-                        }
-                        else if (index2 ==35){
-                            document.getElementById("mig2").style.visibility = 'visible';
-                            document.getElementById("mig1").style.visibility = 'hidden';
-                            document.getElementById("titre93").style.visibility = 'hidden';
-                            document.getElementById("titre94").style.visibility = 'visible';
-                            $.fn.fullpage.setMouseWheelScrolling(true);
-                        }
-                        index2 ++;
-                    }
-                }, 500);
-            </script>
-
-        </div>
-
-        <div class="section" id="section10">
-            <div class="titreslide10">
-                <h3>A few months after they arrived at their final destination, the family got news from a friend they met during their migration: one of their missing relatives was dead.</h3>
-            </div>
-            <div class="titreslide10-2">
-                <h3><br>Some will never know what happened to their relatives.
-                    <br>Others will receive a call.
-                    <br>Those are the migrants you daily hear about in the news
-                    <br>For example, the Lampedusa catastrophe, during which 368 people died in 2013, motivated the Missing Migrant Project. </h3>
-            </div>
-            <div >
-                <img src="images/V1/lampedusa_map.png" alt="lampedusa" id="lampedusa">
-            </div>
         </div>
 
         <div class="section" id="section11">
-        <div id="titre111" class="layer">
-            <h3>The stakes are high. There is a need to collect information from newspapers, aggregate data coming from thousands of voluntaries involved in the study of migrations flows or even in the rescue.</h3>
-                <h4> <br />This information is incredibly hard to collect and analyse, but things get done thanks to the work of thousands of UN workers, journalists, NGOs, migrants witnesses...</h4>
+            <img src="images/V2/Slide%2012/12_background.png" class="image">
+
+            <div class="left">
+                <h1>How can you act ?</h1>
+                <h2>As a citizen, you can engage in pushing for welcoming and integrating policies.</h2>
+                <h3>You can try and influence your government into taking further actions to protect and shelter
+                    migrants.
+                    You can share the data of the Missing Migrants Project and shed a light on their initiative.
+                    Because by putting ourselves in their shoes for a moment, realizing that we could also be that
+                    family if we were born somewhere else in the world…
+                    We can only feel an urge to help.
+                    <br>
+                    <br>
+                    <br>
+                    If you have any question or remarks regarding the project, the data or the visualizations,
+                    feel free to contact us at : <a href="mailto:alongjourney@gmail.com">alongjourney@gmail.com</a>
+                </h3>
+
             </div>
-            <div class="image11">
-                <img src="images/V1/news0.png" id="news0" alt="news0" class="image">
-                <img src="images/V1/news1.png" id="news1" alt="news1" class="image">
-                <img src="images/V1/news2.png" id="news2" alt="news2" class="image">
-                <img src="images/V1/news3.png" id="news3" alt="news3" class="image">
+            <div class="right">
+                <h2>“Our message is blunt: migrants are dying who need not.
+                    It is time to do more than count the number of deaths.
+                    It is time to engage the world to stop this violence against desperate migrants.”
+                    <br>
+                    IOM Director General William Lacy Swing
+                </h2>
+                <h1>Our story</h1>
+                <h3>We are a team of students at Télécom ParisTech working on a project for our Data
+                    Visualization class. We wanted to tackle this issue that is to us fundamental. Because we hear
+                    so much about it, numbers of deaths are hard to comprehend. We wanted to make people understand
+                    our need to act as a society by making them feel something through the tragic journey of this
+                    family, illustrated by data from IOM’s Missing Migrants Project.
+                    <br>
+                    <br>
+                    Arlène Botokro, Mathilda Di Matteo, Marine Hévin, Florent Votte
+                    <br>
+                    December 2017
+                </h3>
             </div>
 
 
-
-            <script>
-                var index10 = 0;
-                document.getElementById("news1").style.visibility = 'hidden';
-                document.getElementById("news2").style.visibility = 'hidden';
-                document.getElementById("news3").style.visibility = 'hidden';
-
-
-                window.setInterval(function(){
-
-                    if ((window.location.hash==="#11")){
-                        if (index10==0){
-                            $.fn.fullpage.setMouseWheelScrolling(false);
-                        }
-                        else if (index10 ==20) {
-                            document.getElementById("news1").style.visibility = 'visible';
-                            document.getElementById("news0").style.visibility = 'hidden';
-
-                        }
-                        else if (index10 ==40) {
-                            document.getElementById("news2").style.visibility = 'visible';
-                            document.getElementById("news1").style.visibility = 'hidden';
-                        }
-                        else if (index10==60){
-                            document.getElementById("news3").style.visibility = 'visible';
-                            document.getElementById("news2").style.visibility = 'hidden';
-                            $.fn.fullpage.setMouseWheelScrolling(true);
-                        }
-                        index10 ++;
-                        }
-                    }, 100);
-            </script>
-
-        </div>
-
-        <div class="section" id="section12">
-            <h3>Our goal is to make people realize the extent of the phenomenon in order to act. How can you act? 
-            <br>
-            <ul>
-                <br>
-                <br>
-                <li>As a citizen, you can engage in pushing for welcoming and integrating policies </li>
-                <li>As a policy maker, in taking further actions to protect and shelter migrants </li>
-                <li>Or just as a human being you can engage in helping migrants searching for asylum in your country</li>
-            </ul></h3>
-        </div>
-
-        <div class="section" id="section13">
-            <h2>Special thanks to:</h2>
-            <br>
-            <h3>Samuel Huron</h3>
         </div>
 
     </div>
