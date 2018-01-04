@@ -20,7 +20,6 @@
         <link rel="stylesheet" href="css/ammap.css" type="text/css">
         <script src="js/ammap2.js" type="text/javascript"></script>
         <script src="js/worldLow.js" type="text/javascript"></script>
-        <script src="js/worldHigh.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
         <link rel="stylesheet" type="text/css" href="css/examples.css"/>
         <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
@@ -28,22 +27,13 @@
         <link href="https://fonts.googleapis.com/css?family=Spectral:300" rel="stylesheet">
 
 
-
-        <script src="js/typed.min.js" type="text/javascript"></script>
-        <script src="assets/demos.js"></script>
-
-
         <!-- Config de FullPage -->
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#fullpage').fullpage({
-                    verticalCentered: true,
+                    verticalCentered: false,
                     lockAnchors: false,
-                    navigation: false,
-                    navigationTooltips: ['Presentation', "Family's Journey", 'Migration', 'Comparison', "Mediterranean's data", 'The most dangerous path', 'Central Route',
-                        'Easter Route', 'Main route of migration', 'Statistics', 'Origins of the project', 'Data sources', 'Goals', 'Thanks'],
-                    showActiveTooltip: false,
-                    anchors:['0','1', '2', '3', '4','5', '6', '7', '8', '9', '10', '11', '12', '13', '14','15', '16', '17']
+                    anchors:['0','1', '2', '3', '4','5', '6', '7', '8', '9', '10', '11']
 
                 });
             });
@@ -52,7 +42,7 @@
         <!-- Style de la page (CSS) -->
         <style>
 
-
+            /* Titres */
             h1{
                 font-size: 2em;
                 font-family: 'Roboto', sans-serif;
@@ -60,12 +50,14 @@
                 margin: 5%;
                 padding-top: 20%;
             }
+            /* Sous-Titre */
             h2{
                 font-size: 1.5em;
                 font-family: 'Open Sans', sans-serif;
                 color: #9d9c95;
                 margin: 5%;
             }
+            /* Corps */
             h3{
                 font-size: 1em;
                 font-family: 'Spectral', serif;
@@ -74,11 +66,12 @@
 
             }
 
+
+            /* Classe d'objet */
             .section{
                 text-align:center;
                 overflow: hidden;
             }
-
             .left {
                 position: absolute;
                 height: 100%;
@@ -95,7 +88,6 @@
                 left: 46.5%;
                 z-index: 20;
             }
-
             .scroll {
                 position: absolute;
                 width: 10%;
@@ -109,7 +101,6 @@
                 top: 40%;
                 z-index: 10;
             }
-
             .background {
                 position: absolute;
                 top: 0;
@@ -118,6 +109,8 @@
                 z-index: 1;
             }
 
+
+            /* Mise en forme specifique a chaque slide */
             #section0 .left{
                 position: absolute;
                 height: 100%;
@@ -146,11 +139,6 @@
                 width: 100%;
                 left: 0;
                 top: 20%;
-
-                /*
-                * Preventing flicker on some browsers
-                * See http://stackoverflow.com/a/36671466/1081396  or issue #183
-                */
                 -webkit-transform: translate3d(0,0,0);
                 -ms-transform: translate3d(0,0,0);
                 transform: translate3d(0,0,0);
@@ -260,6 +248,12 @@
                 margin: 2%;
                 padding-top: 0%;
             }
+            #section6 .graph {
+                position: relative;
+                left: 15%;
+                width: 70%;
+                margin-bottom: -2%;
+            }
             #section6 {
                 text-align: left;
             }
@@ -311,11 +305,8 @@
                 text-align: justify;
             }
 
-            #section10 #textMap {
-                position: absolute;
-                top:0;
-                height: 30%;
-                width: 100%;
+            #section10 {
+                text-align: left;
             }
             #section10 h1 {
                 padding-top: 0;
@@ -331,8 +322,17 @@
                 margin-left: 5%;
                 margin-right: 5%;
             }
-            #section10 {
-                text-align: left;
+            #section10 .maps {
+                position: absolute;
+                top: 30%;
+                left: 0px;
+                width: 100%;
+            }
+            #section10 #textMap {
+                position: absolute;
+                top:0;
+                height: 30%;
+                width: 100%;
             }
 
             #section11 {
@@ -353,22 +353,6 @@
             }
             #section11 h3 {
                 text-align: justify;
-            }
-
-
-
-
-            .graph {
-                position: relative;
-                left: 15%;
-                width: 70%;
-                margin-bottom: -2%;
-            }
-            .maps {
-                position: absolute;
-                top: 30%;
-                left: 0px;
-                width: 100%;
             }
 
         </style>
@@ -557,7 +541,7 @@
             <div class="right">
                 <h1>On this route, migrants will have to risk the main cause of death by far: <u>drowning</u>.</h1>
             </div>
-            <img src="images/V2/Slide%205/causes.png" alt="" style="position: absolute; height: 80%; bottom: 0; right: 6.5%;">
+            <img src="images/V2/Slide%205/causes.png" alt="" style="position: absolute;max-width: 45%; height: 80%; bottom: 0; right: 6.5%;">
         </div>
 
         <div class="section" id="section5">
@@ -575,7 +559,7 @@
                 <h1>Although many migrants travel through this route by land, <u>drowning</u> remains the main cause of death. </h1>
                 <h2>Vehicle accidents are the second identified cause of death.</h2>
             </div>
-            <img src="images/V2/Slide%206/causes.png" alt="" style="position: absolute; height: 60%; bottom: 0; right: 6.5%;">
+            <img src="images/V2/Slide%206/causes.png" alt="" style="position: absolute; height: 60%; max-width: 45%; bottom: 0; right: 6.5%;">
         </div>
 
         <div class="section" id="section6">
