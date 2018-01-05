@@ -95,6 +95,13 @@
                 bottom: 0%;
                 z-index: 9;
             }
+            .scroll_right {
+                position: absolute;
+                width: 10%;
+                left: 68.25%;
+                bottom: 0%;
+                z-index: 9;
+            }
             .scroll_txt {
                 position: relative;
                 right: 26.5%;
@@ -453,10 +460,11 @@
 
         <div class="section" id="section2">
             <img src="images/V2/Slide%203/2_bagages.png" class="image">
+            <img id="scroll_3" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll_right">
 
             <div class="left">
                 <h1>They were forced to flee their home in Syria …</h1>
-                <h2>Because of the civil war raging there since march 2011.</h2>
+                <h2>Because of the civil war raging there since March 2011.</h2>
                 <h3>They managed to sell their house in Damascus, but for a fraction of its value. They took all of their savings and managed to get to Beirut, Lebanon. </h3>
             </div>
 
@@ -487,6 +495,7 @@
                 document.getElementById("slide2").style.visibility = 'hidden';
                 document.getElementById("slide3").style.visibility = 'hidden';
                 document.getElementById("slide4").style.visibility = 'hidden';
+                document.getElementById("scroll_3").style.visibility = 'hidden';
 
 
                 window.setInterval(function(){
@@ -507,10 +516,12 @@
                         else if (index3 % 100 == 60){
                             document.getElementById("slide4").style.visibility = 'visible';
                             document.getElementById("slide3").style.visibility = 'hidden';
+                            document.getElementById("scroll_3").style.visibility = 'visible';
+
                         }
                         index3 ++;
                     }
-                }, 500);
+                }, 300);
             </script>
         </div>
 
@@ -537,7 +548,7 @@
 
             <div class="left">
                 <h1>Taking the Central route would be the most common solution.</h1>
-                <h2>But is this a risk our family will take ?</h2>
+                <h2>But is this a risk our family will take?</h2>
                 <h3>They could take the <b>Central route</b> and make the journey by sea from Egypt or Libya.
                     This route is the cheapest, therefore the most travelled through. However, the living conditions
                     are poor and the journey often deadly as travelling by sea is very risky.</h3>
@@ -589,16 +600,7 @@
                             "July 2016", "August 2016", "September 2016", "October 2016", "November 2016", "December 2016",
                             "January 2017", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017",
                             "July 2017", "August 2017", "September 2017", "October 2017", "November 2017"],
-                        datasets: [{
-                            label: 'Total',
-                            backgroundColor: color(window.chartColors.black).alpha(0.7).rgbString(),
-                            borderColor: window.chartColors.cyan,
-                            borderWidth: 1,
-                            data: [24, 10, 50, 329, 318, 789, 616, 813, 126, 22, 99,
-                                82, 345, 61, 1222, 96, 33, 230, 699, 269, 421, 107, 217,
-                                370, 55, 324, 630, 1178, 389, 226, 62, 80, 437, 718, 386,
-                                254, 231, 308, 312, 613, 547, 132, 151, 108, 168, 135]
-                        },
+                        datasets: [
                             {
                                 label: 'Central route',
                                 backgroundColor: color(window.chartColors.black).alpha(0).rgbString(),
@@ -630,18 +632,12 @@
                             "Jul 2016", "Aug 2016", "Sep 2016", "Oct 2016", "Nov 2016", "Dec 2016",
                             "Jan 2017", "Feb 2017", "Mar 2017", "Apr 2017", "May 2017", "Jun 2017",
                             "Jul 2017", "Aug 2017", "Sep 2017", "Oct 2017", "Nov 2017"],
-                        datasets: [{
-                            label: 'Total',
-                            backgroundColor: color("#dcdcdc").alpha(0.4).rgbString(),
-                            borderColor: color("#3c3f41").alpha(1).rgbString(),
-                            borderWidth: 2,
-                            data: [12]
-                        }, {label: 'Central route',
+                        datasets: [{label: 'Central route',
                             backgroundColor: color("#ffffff").alpha(0).rgbString(),
                             borderColor: color("#c50021").alpha(1).rgbString(),
                             borderWidth: 2,
                             data: [0] }, {
-                            label: 'Easter and Western route',
+                            label: 'Eastern and Western routes',
                             backgroundColor: color("#ffffff").alpha(0).rgbString(),
                             borderColor: color("#969696").alpha(1).rgbString(),
                             borderWidth: 2,
@@ -689,7 +685,7 @@
                                         position: 'right',
                                         scaleLabel: {
                                             display: true,
-                                            labelString: 'Nb dead and missing'
+                                            labelString: 'Number of dead and missing'
                                         }
                                     }]
                                 }
@@ -701,7 +697,7 @@
                         if ((dataArray.datasets[0].data.length>0) & (window.location.hash==="#6") ){
                             barChartData.datasets[0].data.push(dataArray.datasets[0].data.shift());
                             barChartData.datasets[1].data.push(dataArray.datasets[1].data.shift());
-                            barChartData.datasets[2].data.push(dataArray.datasets[2].data.shift());
+                            //barChartData.datasets[2].data.push(dataArray.datasets[2].data.shift());
                             window.myBar.update();
                         }
                         else if(!(dataArray.datasets[0].data.length>0)){
@@ -712,24 +708,25 @@
         </div>
 
         <div class="section" id="section7">
+            <img id="scroll_7" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll_right">
 
             <div class="left">
                 <h1>They had to cross through the Central route because they couldn’t afford to travel by land.</h1>
                 <h2>They were separated along the way, like so many other families before them.</h2>
-                <h3>Upon the family’s arrival in Italy, two people were missing : Ammar and his sister Haya.</h3>
+                <h3>Upon the family’s arrival in Italy, two people were missing: Ammar and his sister Haya.</h3>
                 <img src="images/V2/Slide%208/8_missing.png" class="image">
             </div>
             <div class="right">
                 <h1>The weight of death and loss on those migration routes is crushing.</h1>
 
                 <div id="titre92" class="titre7">
-                    <h2> Suppose a boat of 100 persons  </h2>
+                    <h2>Let us imagine a boat transporting 100 migrants.</h2>
                 </div>
                 <div id="titre93" class="titre7">
-                    <h2> At their arrival, 20 will be missing</h2>
+                    <h2>Upon its arrival, 20 migrants will be missing...</h2>
                 </div>
                 <div id="titre94" class="titre7">
-                    <h2>19 will be dead</h2>
+                    <h2>and 19 will be dead.</h2>
                 </div>
                 <img src="images/V2/Slide%208/mig0.png" id="mig0" alt="mig0" class="image">
                 <img src="images/V2/Slide%208/mig1.png" id="mig1" alt="mig1" class="image">
@@ -745,6 +742,7 @@
                 document.getElementById("mig2").style.visibility = 'hidden';
                 document.getElementById("titre93").style.visibility = 'hidden';
                 document.getElementById("titre94").style.visibility = 'hidden';
+                document.getElementById("scroll_7").style.visibility = 'hidden';
 
 
                 window.setInterval(function(){
@@ -767,6 +765,7 @@
                             document.getElementById("mig1").style.visibility = 'hidden';
                             document.getElementById("titre93").style.visibility = 'hidden';
                             document.getElementById("titre94").style.visibility = 'visible';
+                            document.getElementById("scroll_7").style.visibility = 'visible';
                         }
                         index2 ++;
                     }
