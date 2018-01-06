@@ -125,6 +125,13 @@
                 left: 0;
                 z-index: 1;
             }
+            .progressBar {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1%;
+                background-color: #6f98c3;
+            }
 
 
             /* Mise en forme specifique a chaque slide */
@@ -284,6 +291,7 @@
                 width: 100%;
                 left: 0;
                 bottom: 5%;
+                z-index: -1;
             }
             #section7 h1 {
                 padding-top: 10%;
@@ -416,7 +424,9 @@
                 <div id="titre3" class="layer">
                     <h1>Their journey was a migration.</h1>
                 </div>
+                <div id="progress2" class="progressBar"></div>
             </div>
+
             <div class="right" id="right_2">
 
                 <h1>Migrant</h1>
@@ -445,33 +455,34 @@
                 document.getElementById("titre3").style.visibility = 'hidden';
                 document.getElementById("scroll_2").style.visibility = 'hidden';
                 document.getElementById("right_2").style.visibility = 'hidden';
+                document.getElementById("progress2").style.width = '0%';
 
 
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#1")){
-                        if (index % 60 == 0){
+                        if (index % 100 == 0){
                             document.getElementById("titre3").style.visibility = 'hidden';
                             document.getElementById("titre1").style.visibility = 'visible';
                         }
-                        else if (index % 60 == 20){
+                        else if (index % 100 == 30){
                             document.getElementById("titre1").style.visibility = 'hidden';
                             document.getElementById("titre2").style.visibility = 'visible';
                         }
-                        else if (index % 60 == 40){
+                        else if (index % 100 == 60){
                             document.getElementById("titre2").style.visibility = 'hidden';
                             document.getElementById("titre3").style.visibility = 'visible';
 
                         }
-                        else if (index % 60 == 45){
+                        else if (index % 100 == 70){
                             document.getElementById("scroll_2").style.visibility = 'visible';
                             document.getElementById("right_2").style.visibility = 'visible';
                         }
 
-
+                        document.getElementById("progress2").style.width = String(index % 100) + "%";
                         index ++;
                     }
-                }, 200);
+                }, 125);
             </script>
         </div>
 
@@ -504,6 +515,7 @@
                     <h2>This is more than 10 times<br>the population of Paris</h2>
                     <img src="images/V2/Slide%203/paris.png" alt="paris">
                 </div>
+                <div id="progress3" class="progressBar"></div>
             </div>
 
             <script>
@@ -513,6 +525,7 @@
                 document.getElementById("slide3").style.visibility = 'hidden';
                 document.getElementById("slide4").style.visibility = 'hidden';
                 document.getElementById("scroll_3").style.visibility = 'hidden';
+                document.getElementById("progress3").style.width = '0%';
 
 
                 window.setInterval(function(){
@@ -522,23 +535,24 @@
                             document.getElementById("slide1").style.visibility = 'visible';
                             document.getElementById("slide4").style.visibility = 'hidden';
                         }
-                        else if (index3 % 100 == 20){
+                        else if (index3 % 100 == 25){
                             document.getElementById("slide2").style.visibility = 'visible';
                             document.getElementById("slide1").style.visibility = 'hidden';
                         }
-                        else if (index3 % 100 == 40){
+                        else if (index3 % 100 == 50){
                             document.getElementById("slide3").style.visibility = 'visible';
                             document.getElementById("slide2").style.visibility = 'hidden';
                         }
-                        else if (index3 % 100 == 60){
+                        else if (index3 % 100 == 75){
                             document.getElementById("slide4").style.visibility = 'visible';
                             document.getElementById("slide3").style.visibility = 'hidden';
                             document.getElementById("scroll_3").style.visibility = 'visible';
 
                         }
+                        document.getElementById("progress3").style.width = String(index3 % 100) + "%";
                         index3 ++;
                     }
-                }, 300);
+                }, 200);
             </script>
         </div>
 
@@ -560,8 +574,6 @@
             <script>
                 var map;
 
-                // svg path for target icon
-                var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z ";
 
                 AmCharts.ready(function() {
                     map = new AmCharts.AmMap();
@@ -574,6 +586,7 @@
                             "latitudes":  [ 30.851, 29.965, 33.736, 36.945, 39.479, 44.909 ],
                             "longitudes": [ 34.030, 19.610, 9.914, 14.905, 16.489, 9.448 ],
                             "title": "Central Route",
+                            "id": "central",
                             "color": "#35cc33"
                         },{
                             "latitudes":  [ 30.851668, 29.965884, 33.73662, 36.945175, 39.479161, 44.90955 ],
@@ -599,6 +612,7 @@
                             "latitudes": [ 36.082142, 40.604889,41.559658,42.396853, 47.951100 ],
                             "longitudes": [ 37.445731, 30.617502,27.101472,20.476199, 12.025977 ],
                             "title": "Eastern Route",
+                            "id": "eastern",
                             "color": "#CC0000"
                         },{
                             "latitudes": [ 36.082142, 40.604889,41.559658,42.396853, 47.951100 ],
@@ -618,6 +632,7 @@
                         }]
                     };
 
+
                     map.areasSettings = {
                         unlistedAreasColor: "#dddddd",
                         autoZoom: true
@@ -631,7 +646,7 @@
                     map.imagesSettings = {
                         color: "#bd6975",
                         rollOverColor: "#c50021",
-                        selectedColor: "#000000"
+                        selectedColor: "#000000",
                     };
 
 
@@ -837,6 +852,7 @@
                 <img src="images/V2/Slide%208/mig0.png" id="mig0" alt="mig0" class="image">
                 <img src="images/V2/Slide%208/mig1.png" id="mig1" alt="mig1" class="image">
                 <img src="images/V2/Slide%208/mig2.png" id="mig2" alt="mig2" class="image">
+                <div id="progress7" class="progressBar"></div>
 
 
 
@@ -849,33 +865,36 @@
                 document.getElementById("titre93").style.visibility = 'hidden';
                 document.getElementById("titre94").style.visibility = 'hidden';
                 document.getElementById("scroll_7").style.visibility = 'hidden';
+                document.getElementById("progress7").style.width = '0%';
 
 
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#7")){
-                        if (index2%40==0){
+                        if (index2%100==0){
                             document.getElementById("titre94").style.visibility = 'hidden';
                             document.getElementById("titre92").style.visibility = 'visible';
                             document.getElementById("mig2").style.visibility = 'hidden';
                             document.getElementById("mig0").style.visibility = 'visible';
                         }
-                        else if (index2%40 ==20){
+                        else if (index2%100 ==40){
                             document.getElementById("mig1").style.visibility = 'visible';
                             document.getElementById("mig0").style.visibility = 'hidden';
                             document.getElementById("titre92").style.visibility = 'hidden';
                             document.getElementById("titre93").style.visibility = 'visible';
                         }
-                        else if (index2%40 ==30){
+                        else if (index2%100 ==60){
                             document.getElementById("mig2").style.visibility = 'visible';
                             document.getElementById("mig1").style.visibility = 'hidden';
                             document.getElementById("titre93").style.visibility = 'hidden';
                             document.getElementById("titre94").style.visibility = 'visible';
                             document.getElementById("scroll_7").style.visibility = 'visible';
                         }
+
+                        document.getElementById("progress7").style.width = String(index2 % 100) + "%";
                         index2 ++;
                     }
-                }, 400);
+                }, 100);
             </script>
 
         </div>
@@ -894,8 +913,25 @@
                 <h1>Collecting data about missing migrants is an almost impossible task. </h1>
                 <h2>But the stakes are high. Because families around the world need closure,
                     and the world needs to open its eyes on the issue.</h2>
+                <span id="wordcloud"></span>
             </div>
+            <script>
+                var words = [
+                    {text: "Lorem", weight: 13},
+                    {text: "Ipsum", weight: 10.5},
+                    {text: "Dolor", weight: 9.4},
+                    {text: "Sit", weight: 8},
+                    {text: "Amet", weight: 6.2},
+                    {text: "Consectetur", weight: 5},
+                    {text: "Adipiscing", weight: 5},
+                    /* ... */
+                ];
 
+                $('#wordcloud').jQCloud(words, {
+                    delay: 50
+                });
+
+            </script>
         </div>
 
         <div class="section" id="section9">
