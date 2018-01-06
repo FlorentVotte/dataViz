@@ -130,7 +130,7 @@
                 bottom: 0;
                 left: 0;
                 height: 1%;
-                background-color: #6f98c3;
+                background-color: #1e1e1e;
             }
 
 
@@ -461,28 +461,28 @@
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#1")){
-                        if (index % 100 == 0){
+                        if (index % 1000 == 0){
                             document.getElementById("titre3").style.visibility = 'hidden';
                             document.getElementById("titre1").style.visibility = 'visible';
                         }
-                        else if (index % 100 == 30){
+                        else if (index % 1000 == 300){
                             document.getElementById("titre1").style.visibility = 'hidden';
                             document.getElementById("titre2").style.visibility = 'visible';
                         }
-                        else if (index % 100 == 60){
+                        else if (index % 1000 == 600){
                             document.getElementById("titre2").style.visibility = 'hidden';
                             document.getElementById("titre3").style.visibility = 'visible';
 
                         }
-                        else if (index % 100 == 70){
+                        else if (index % 1000 == 700){
                             document.getElementById("scroll_2").style.visibility = 'visible';
                             document.getElementById("right_2").style.visibility = 'visible';
                         }
 
-                        document.getElementById("progress2").style.width = String(index % 100) + "%";
+                        document.getElementById("progress2").style.width = String((index % 1000)/10) + "%";
                         index ++;
                     }
-                }, 125);
+                }, 12);
             </script>
         </div>
 
@@ -531,28 +531,28 @@
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#2")){
-                        if (index3 % 100 ==0){
+                        if (index3 % 1000 ==0){
                             document.getElementById("slide1").style.visibility = 'visible';
                             document.getElementById("slide4").style.visibility = 'hidden';
                         }
-                        else if (index3 % 100 == 25){
+                        else if (index3 % 1000 == 250){
                             document.getElementById("slide2").style.visibility = 'visible';
                             document.getElementById("slide1").style.visibility = 'hidden';
                         }
-                        else if (index3 % 100 == 50){
+                        else if (index3 % 1000 == 500){
                             document.getElementById("slide3").style.visibility = 'visible';
                             document.getElementById("slide2").style.visibility = 'hidden';
                         }
-                        else if (index3 % 100 == 75){
+                        else if (index3 % 1000 == 750){
                             document.getElementById("slide4").style.visibility = 'visible';
                             document.getElementById("slide3").style.visibility = 'hidden';
                             document.getElementById("scroll_3").style.visibility = 'visible';
 
                         }
-                        document.getElementById("progress3").style.width = String(index3 % 100) + "%";
+                        document.getElementById("progress3").style.width = String((index3 % 1000)/10) + "%";
                         index3 ++;
                     }
-                }, 200);
+                }, 20);
             </script>
         </div>
 
@@ -871,19 +871,19 @@
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#7")){
-                        if (index2%100==0){
+                        if (index2%1000==0){
                             document.getElementById("titre94").style.visibility = 'hidden';
                             document.getElementById("titre92").style.visibility = 'visible';
                             document.getElementById("mig2").style.visibility = 'hidden';
                             document.getElementById("mig0").style.visibility = 'visible';
                         }
-                        else if (index2%100 ==40){
+                        else if (index2%1000 ==400){
                             document.getElementById("mig1").style.visibility = 'visible';
                             document.getElementById("mig0").style.visibility = 'hidden';
                             document.getElementById("titre92").style.visibility = 'hidden';
                             document.getElementById("titre93").style.visibility = 'visible';
                         }
-                        else if (index2%100 ==60){
+                        else if (index2%1000 ==600){
                             document.getElementById("mig2").style.visibility = 'visible';
                             document.getElementById("mig1").style.visibility = 'hidden';
                             document.getElementById("titre93").style.visibility = 'hidden';
@@ -891,10 +891,10 @@
                             document.getElementById("scroll_7").style.visibility = 'visible';
                         }
 
-                        document.getElementById("progress7").style.width = String(index2 % 100) + "%";
+                        document.getElementById("progress7").style.width = String((index2 % 1000)/10) + "%";
                         index2 ++;
                     }
-                }, 100);
+                }, 10);
             </script>
 
         </div>
