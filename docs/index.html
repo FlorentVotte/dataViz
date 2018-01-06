@@ -543,11 +543,100 @@
                 <h3>In order to get to Europe, just like other migrants coming from Syria and the Middle East,
                     our family had to make a decision between the two Mediterranean migration routes.</h3>
             </div>
-            <img src="images/V2/Slide%204/maps.png" alt="map" width="53.6%" style="z-index: -1;position: absolute;bottom: 0;right: 0;">
             <div class="right">
+                <div id="mapLine" class="maps" style="height: 100%;"></div>
 
-                <h1 style="position: absolute; bottom: 2%; font-size: 1.5em;">The two possible routes : Central & Eastern</h1>
             </div>
+
+            <script>
+                var map;
+
+                // svg path for target icon
+                var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z ";
+
+                AmCharts.ready(function() {
+                    map = new AmCharts.AmMap();
+
+
+                    var dataProvider = {
+                        mapVar: AmCharts.maps.worldLow,
+                        borderColor: '#000000',
+                        lines: [ {
+                            "latitudes":  [ 30.851, 29.965, 33.736, 36.945, 39.479, 44.909 ],
+                            "longitudes": [ 34.030, 19.610, 9.914, 14.905, 16.489, 9.448 ],
+                            "title": "Central Route",
+                            "color": "#35cc33"
+                        },{
+                            "latitudes":  [ 30.851668, 29.965884, 33.73662, 36.945175, 39.479161, 44.90955 ],
+                            "longitudes": [ 34.030162, 19.610460, 9.914395, 14.905530, 16.489431, 9.448295 ],
+                            "title": "Central Route",
+                            "color": "#35cc33"
+                        },{
+                            "latitudes":  [ 30.851668, 29.965884, 33.73662, 36.945175, 39.479161, 44.90955 ],
+                            "longitudes": [ 34.030162, 19.610460, 9.914395, 14.905530, 16.489431, 9.448295 ],
+                            "title": "Central Route",
+                            "color": "#35cc33"
+                        },{
+                            "latitudes":  [ 30.851668, 29.965884, 33.73662, 36.945175, 39.479161, 44.90955 ],
+                            "longitudes": [ 34.030162, 19.610460, 9.914395, 14.905530, 16.489431, 9.448295 ],
+                            "title": "Central Route",
+                            "color": "#35cc33"
+                        },{
+                            "latitudes":  [ 30.851668, 29.965884, 33.73662, 36.945175, 39.479161, 44.90955 ],
+                            "longitudes": [ 34.030162, 19.610460, 9.914395, 14.905530, 16.489431, 9.448295 ],
+                            "title": "Central Route",
+                            "color": "#35cc33"
+                        }, {
+                            "latitudes": [ 36.082142, 40.604889,41.559658,42.396853, 47.951100 ],
+                            "longitudes": [ 37.445731, 30.617502,27.101472,20.476199, 12.025977 ],
+                            "title": "Eastern Route",
+                            "color": "#CC0000"
+                        },{
+                            "latitudes": [ 36.082142, 40.604889,41.559658,42.396853, 47.951100 ],
+                            "longitudes": [ 37.445731, 30.617502,27.101472,20.476199, 12.025977 ],
+                            "title": "Eastern Route",
+                            "color": "#CC0000"
+                        },{
+                            "latitudes": [ 36.082142, 40.604889,41.559658,42.396853, 47.951100 ],
+                            "longitudes": [ 37.445731, 30.617502,27.101472,20.476199, 12.025977 ],
+                            "title": "Eastern Route",
+                            "color": "#CC0000"
+                        },{
+                            "latitudes": [ 36.082142, 40.604889,41.559658,42.396853, 47.951100 ],
+                            "longitudes": [ 37.445731, 30.617502,27.101472,20.476199, 12.025977 ],
+                            "title": "Eastern Route",
+                            "color": "#CC0000"
+                        }]
+                    };
+
+                    map.areasSettings = {
+                        unlistedAreasColor: "#dddddd",
+                        autoZoom: true
+
+                    };
+
+                    map.zoomControl = {
+                        zoomControlEnabled: true
+                    };
+
+                    map.imagesSettings = {
+                        color: "#bd6975",
+                        rollOverColor: "#c50021",
+                        selectedColor: "#000000"
+                    };
+
+
+
+                    map.dataProvider = dataProvider;
+                    map.backgroundZoomsToTop = false;
+                    map.linesAboveImages = true;
+                    map.write("mapLine");
+
+                    map.zoomToLongLat(6, 20.493360,36.417964, 0)
+
+                });
+
+            </script>
 
         </div>
 
@@ -853,7 +942,7 @@
                     };
 
                     map.areasSettings = {
-                        unlistedAreasColor: "#dfdfdf"
+                        unlistedAreasColor: "#dddddd"
                     };
 
                     map.imagesSettings = {
