@@ -60,7 +60,7 @@
             }
             /* Corps */
             h3{
-                font-size: 1em;
+                font-size: 1.2em;
                 font-family: 'Spectral', serif;
                 color: #525252;
                 margin: 5%;
@@ -103,14 +103,14 @@
                 width: 10%;
                 left: 18.25%;
                 bottom: 0%;
-                z-index: 9;
+                z-index: 99;
             }
             .scroll_right {
                 position: absolute;
                 width: 10%;
                 left: 68.25%;
                 bottom: 0%;
-                z-index: 9;
+                z-index: 90;
             }
             .scroll_txt {
                 position: relative;
@@ -395,7 +395,7 @@
 
         <div class="section" id="section0">
             <img src="images/V2/Slide%201/1_backgroundA.png" class="background">
-            <img id="scroll_1" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll">
+            <a href="#1"><img id="scroll_1" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll"></a>
             <h2 class="scroll_txt">Scroll down to begin</h2>
             <div class="left">
 
@@ -410,7 +410,7 @@
 
         <div class="section" id="section1">
 
-            <img id="scroll_2" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll">
+            <a href="#2"><img id="scroll_2" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll"></a>
             <div class="left_grey"></div>
             <div class="left">
                 <div id="titre1" class="layer">
@@ -488,7 +488,7 @@
 
         <div class="section" id="section2">
             <img src="images/V2/Slide%203/2_bagages.png" class="image">
-            <img id="scroll_3" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll_right">
+            <a href="#3"><img id="scroll_3" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll_right"></a>
             <div class="left_grey"></div>
             <div class="left">
                 <h1>They were forced to flee their home in Syria …</h1>
@@ -520,7 +520,7 @@
 
             <script>
                 var index3 = 0;
-
+                var tenSec = 0;
                 document.getElementById("slide2").style.visibility = 'hidden';
                 document.getElementById("slide3").style.visibility = 'hidden';
                 document.getElementById("slide4").style.visibility = 'hidden';
@@ -531,26 +531,29 @@
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#2")){
-                        if (index3 % 1000 ==0){
-                            document.getElementById("slide1").style.visibility = 'visible';
-                            document.getElementById("slide4").style.visibility = 'hidden';
-                        }
-                        else if (index3 % 1000 == 250){
-                            document.getElementById("slide2").style.visibility = 'visible';
-                            document.getElementById("slide1").style.visibility = 'hidden';
-                        }
-                        else if (index3 % 1000 == 500){
-                            document.getElementById("slide3").style.visibility = 'visible';
-                            document.getElementById("slide2").style.visibility = 'hidden';
-                        }
-                        else if (index3 % 1000 == 750){
-                            document.getElementById("slide4").style.visibility = 'visible';
-                            document.getElementById("slide3").style.visibility = 'hidden';
-                            document.getElementById("scroll_3").style.visibility = 'visible';
+                        if(tenSec > 300) {
+                            if (index3 % 1000 == 0) {
+                                document.getElementById("slide1").style.visibility = 'visible';
+                                document.getElementById("slide4").style.visibility = 'hidden';
+                            }
+                            else if (index3 % 1000 == 250) {
+                                document.getElementById("slide2").style.visibility = 'visible';
+                                document.getElementById("slide1").style.visibility = 'hidden';
+                            }
+                            else if (index3 % 1000 == 500) {
+                                document.getElementById("slide3").style.visibility = 'visible';
+                                document.getElementById("slide2").style.visibility = 'hidden';
+                            }
+                            else if (index3 % 1000 == 750) {
+                                document.getElementById("slide4").style.visibility = 'visible';
+                                document.getElementById("slide3").style.visibility = 'hidden';
+                                document.getElementById("scroll_3").style.visibility = 'visible';
 
+                            }
+                            document.getElementById("progress3").style.width = String((index3 % 1000) / 10) + "%";
+                            index3++;
                         }
-                        document.getElementById("progress3").style.width = String((index3 % 1000)/10) + "%";
-                        index3 ++;
+                        tenSec++;
                     }
                 }, 20);
             </script>
@@ -670,7 +673,7 @@
             <div class="left">
                 <h1>Taking the Central route would be the most common solution.</h1>
                 <h2>But is this a risk our family will take?</h2>
-                <h3>They could take the <b>Central route</b> and make the journey by sea from Egypt or Libya.
+                <h3>The family could take the <b>Central route</b> and make the journey by sea from Egypt or Libya.
                     This route is the cheapest, therefore the most travelled through. However, the living conditions
                     are poor and the journey often deadly as travelling by sea is very risky.</h3>
             </div>
@@ -687,7 +690,7 @@
             <div class="left">
                 <h1>Taking the Eastern route would be less risky.</h1>
                 <h2>But can they afford it ?</h2>
-                <h3>They could choose to travel through Turkey and reach Europe by land with the <b>Eastern route</b>.
+                <h3>The family could choose to travel through Turkey and reach Europe by land with the <b>Eastern route</b>.
                     This road is less dangerous because they could avoid crossing by boat, but the journey by
                     land is more expensive. There is also a greater risk to get caught crossing by land.</h3>
             </div>
@@ -829,7 +832,7 @@
         </div>
 
         <div class="section" id="section7">
-            <img id="scroll_7" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll_right">
+            <a href="#8"><img id="scroll_7" src="images/V2/Slide%201/1_scroll.png" alt="family" class="scroll_right"></a>
             <div class="left_grey"></div>
             <div class="left">
                 <h1>They had to cross through the Central route because they couldn’t afford to travel by land.</h1>
@@ -859,7 +862,7 @@
             </div>
             <script>
                 var index2 = 0;
-
+                var tenSecBis = 0;
                 document.getElementById("mig1").style.visibility = 'hidden';
                 document.getElementById("mig2").style.visibility = 'hidden';
                 document.getElementById("titre93").style.visibility = 'hidden';
@@ -871,28 +874,31 @@
                 window.setInterval(function(){
 
                     if ((window.location.hash==="#7")){
-                        if (index2%1000==0){
-                            document.getElementById("titre94").style.visibility = 'hidden';
-                            document.getElementById("titre92").style.visibility = 'visible';
-                            document.getElementById("mig2").style.visibility = 'hidden';
-                            document.getElementById("mig0").style.visibility = 'visible';
-                        }
-                        else if (index2%1000 ==400){
-                            document.getElementById("mig1").style.visibility = 'visible';
-                            document.getElementById("mig0").style.visibility = 'hidden';
-                            document.getElementById("titre92").style.visibility = 'hidden';
-                            document.getElementById("titre93").style.visibility = 'visible';
-                        }
-                        else if (index2%1000 ==600){
-                            document.getElementById("mig2").style.visibility = 'visible';
-                            document.getElementById("mig1").style.visibility = 'hidden';
-                            document.getElementById("titre93").style.visibility = 'hidden';
-                            document.getElementById("titre94").style.visibility = 'visible';
-                            document.getElementById("scroll_7").style.visibility = 'visible';
-                        }
+                        if(tenSecBis > 700) {
+                            if (index2 % 1000 == 0) {
+                                document.getElementById("titre94").style.visibility = 'hidden';
+                                document.getElementById("titre92").style.visibility = 'visible';
+                                document.getElementById("mig2").style.visibility = 'hidden';
+                                document.getElementById("mig0").style.visibility = 'visible';
+                            }
+                            else if (index2 % 1000 == 400) {
+                                document.getElementById("mig1").style.visibility = 'visible';
+                                document.getElementById("mig0").style.visibility = 'hidden';
+                                document.getElementById("titre92").style.visibility = 'hidden';
+                                document.getElementById("titre93").style.visibility = 'visible';
+                            }
+                            else if (index2 % 1000 == 600) {
+                                document.getElementById("mig2").style.visibility = 'visible';
+                                document.getElementById("mig1").style.visibility = 'hidden';
+                                document.getElementById("titre93").style.visibility = 'hidden';
+                                document.getElementById("titre94").style.visibility = 'visible';
+                                document.getElementById("scroll_7").style.visibility = 'visible';
+                            }
 
-                        document.getElementById("progress7").style.width = String((index2 % 1000)/10) + "%";
-                        index2 ++;
+                            document.getElementById("progress7").style.width = String((index2 % 1000) / 10) + "%";
+                            index2++;
+                        }
+                        tenSecBis++;
                     }
                 }, 10);
             </script>
