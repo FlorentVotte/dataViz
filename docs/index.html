@@ -394,6 +394,17 @@
                 height: 30%;
                 width: 100%;
             }
+            #section10 .legend {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+            #section10 .legend h3{
+                text-align: right;
+                font-size: 1em;
+                margin-right: 2%;
+                margin-bottom: 0;
+            }
 
             #section11 {
                 text-align: left;
@@ -1097,6 +1108,9 @@
             </div>
 
             <div id="mapdiv" class="maps" style="height: 70%;"></div>
+            <div class="legend">
+                <h3>Move arround the map to discover the count count of missing and dead migrants per route</h3>
+            </div>
 
             <script>
                 var map;
@@ -1136,6 +1150,7 @@
                         {
                             svgPath: targetSVG,
                             title: 'Calais to United Kingdom\n\r48 missing or dead',
+                            color: "#0c44bd",
                             latitude: '51.032000',
                             longitude: '1.530730'
                         },
