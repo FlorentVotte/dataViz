@@ -302,6 +302,17 @@
             #section6 {
                 text-align: left;
             }
+            #section6 .legend {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+            #section6 .legend h3{
+                text-align: right;
+                font-size: 1em;
+                margin: 0;
+                margin-right: 2%;
+            }
 
             #section7 .image{
                 position: absolute;
@@ -740,6 +751,9 @@
             <div class="graph">
                 <canvas id="canvas"></canvas>
             </div>
+            <div class="legend">
+                <h3>*The two Mediterranean migration routes for migrants coming from the Middle East</h3>
+            </div>
 
             <script>
                     var color = Chart.helpers.color;
@@ -789,7 +803,7 @@
                             borderColor: color("#c50021").alpha(1).rgbString(),
                             borderWidth: 2,
                             data: [0] }, {
-                            label: 'Eastern and Western routes',
+                            label: 'Eastern and Western* routes',
                             backgroundColor: color("#ffffff").alpha(0).rgbString(),
                             borderColor: color("#969696").alpha(1).rgbString(),
                             borderWidth: 2,
