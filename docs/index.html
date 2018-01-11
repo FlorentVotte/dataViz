@@ -26,6 +26,13 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Spectral:300" rel="stylesheet">
 
+        <!--  wordcloud-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.0-beta.3/vega-lite.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.0-beta.31/vega.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.14/vega-embed.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.3.3/vega-tooltip.min.css"></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.3.3/vega-tooltip.min.js"></script>
+
 
         <!-- Config de FullPage -->
         <script type="text/javascript">
@@ -132,7 +139,10 @@
                 height: 1%;
                 background-color: #1e1e1e;
             }
-
+            .risques_img {
+                height: 10%;
+                right: 0;
+            }
 
             /* Mise en forme specifique a chaque slide */
             #section0 .left{
@@ -671,28 +681,41 @@
             <img src="images/V2/Slide%205/5_central.png" class="image">
             <div class="left_grey"></div>
             <div class="left">
-                <h1>Taking the Central route would be the most common solution.</h1>
-                <h2>But is this a risk our family will take?</h2>
-                <h3>The family could take the <b style="color: black;">Central route</b> and make the journey by sea from Egypt or Libya.
-                    This route is the cheapest, therefore the most travelled through. However, the living conditions
-                    are poor and the journey often deadly as travelling by sea is very risky.</h3>
+                <h1>The Central route is the most dangerous route to cross the Mediterranean. git </h1>
+                <h2>It is also the cheapest. Is this a risk our family will take ?</h2>
+                <h3>When taking the <b style="color: black;">Central route</b>, migrants make the
+                    journey by sea from Egypt or Libya. This route is the cheapest, therefore the most travelled
+                    through. However, the living conditions are poor and the journey often deadly since many boats
+                    capsize on the way.</h3>
             </div>
 
             <div class="right">
                 <h1>On this route, migrants will have to risk the main cause of death by far: <u>drowning</u>.</h1>
             </div>
-            <img src="images/V2/Slide%205/causes.png" alt="" style="position: absolute;max-width: 45%; height: 80%; bottom: 0; right: 6.5%;">
+
+            <div style="position: absolute;max-width: 45%; height: 80%; bottom: 0; right: 6.5%;">
+                <img src="images/V2/Slide%205/cause_1.png" alt="" class="risques_img">
+                <img src="images/V2/Slide%205/cause_2.png" alt="" class="risques_img">
+                <img src="images/V2/Slide%205/cause_3.png" alt="" class="risques_img">
+                <img src="images/V2/Slide%205/cause_4.png" alt="" class="risques_img">
+                <img src="images/V2/Slide%205/cause_5.png" alt="" class="risques_img">
+                <img src="images/V2/Slide%205/cause_6.png" alt="" class="risques_img">
+                <img src="images/V2/Slide%205/cause_7.png" alt="" class="risques_img">
+                <img src="images/V2/Slide%205/cause_8.png" alt="" class="risques_img">
+            </div>
         </div>
 
         <div class="section" id="section5">
             <img src="images/V2/Slide%206/6_eastern.png" class="image">
             <div class="left_grey"></div>
             <div class="left">
-                <h1>Taking the Eastern route would be less risky.</h1>
-                <h2>But can they afford it ?</h2>
-                <h3>The family could choose to travel through Turkey and reach Europe by land with the <b style="color: black;">Eastern route</b>.
-                    This road is less dangerous because they could avoid crossing by boat, but the journey by
-                    land is more expensive. There is also a greater risk to get caught crossing by land.</h3>
+                <h1>Reaching Europe through the Eastern route would be less risky for the family.</h1>
+                <h2>They could avoid crossing by sea, but not necessarily as the journey
+                    by land is much more expensive.</h2>
+                <h3>The <b style="color: black;">Eastern route</b> goes through Turkey and it is less deadly because migrants can avoid crossing by
+                    sea if they cross via Erdine, a Turkish city near the Greek frontier. But the journey by land is more
+                    expensive, so many migrants still risk their lives trying  to get from Turkey to Greece by sea. There
+                    is also a greater risk to get caught crossing by land.</h3>
             </div>
 
             <div class="right">
@@ -919,24 +942,101 @@
                 <h1>Collecting data about missing migrants is an almost impossible task. </h1>
                 <h2>But the stakes are high. Because families around the world need closure,
                     and the world needs to open its eyes on the issue.</h2>
-                <span id="wordcloud"></span>
+                <div id="wordCloud" style="position: relative; width: 600px; height: 300px; display: inline-block; vertical-align: middle"></div>
             </div>
             <script>
-                var words = [
-                    {text: "Lorem", weight: 13},
-                    {text: "Ipsum", weight: 10.5},
-                    {text: "Dolor", weight: 9.4},
-                    {text: "Sit", weight: 8},
-                    {text: "Amet", weight: 6.2},
-                    {text: "Consectetur", weight: 5},
-                    {text: "Adipiscing", weight: 5},
-                    /* ... */
-                ];
 
-                $('#wordcloud').jQCloud(words, {
-                    delay: 50
+                var vlSpec = {
+                    "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+                    "name": "wordcloud",
+                    "width": 600,
+                    "height": 300,
+                    "padding": 0,
+
+                    "data": [
+                        {
+                            "name": "table",
+                            "values": [ "Coucou je suis flereuioghzz zfhoizefj zjfoizejf hezoifjzeifo"],
+                            "transform": [
+                                {
+                                    "type": "countpattern",
+                                    "field": "data",
+                                    "case": "upper",
+                                    "pattern": "[\\w']{3,}",
+                                    "stopwords": "(i|me|my|myself|we|us|our|ours|ourselves|you|your|yours|yourself|yourselves|he|him|his|himself|she|her|hers|herself|it|its|itself|they|them|their|theirs|themselves|what|which|who|whom|whose|this|that|these|those|am|is|are|was|were|be|been|being|have|has|had|having|do|does|did|doing|will|would|should|can|could|ought|i'm|you're|he's|she's|it's|we're|they're|i've|you've|we've|they've|i'd|you'd|he'd|she'd|we'd|they'd|i'll|you'll|he'll|she'll|we'll|they'll|isn't|aren't|wasn't|weren't|hasn't|haven't|hadn't|doesn't|don't|didn't|won't|wouldn't|shan't|shouldn't|can't|cannot|couldn't|mustn't|let's|that's|who's|what's|here's|there's|when's|where's|why's|how's|a|an|the|and|but|if|or|because|as|until|while|of|at|by|for|with|about|against|between|into|through|during|before|after|above|below|to|from|up|upon|down|in|out|on|off|over|under|again|further|then|once|here|there|when|where|why|how|all|any|both|each|few|more|most|other|some|such|no|nor|not|only|own|same|so|than|too|very|say|says|said|shall)"
+                                },
+                                {
+                                    "type": "formula", "as": "angle",
+                                    "expr": "[0, 0, 0][~~(random() * 3)]"
+                                },
+                                {
+                                    "type": "formula", "as": "weight",
+                                    "expr": "if(datum.text=='VEGA', 600, 300)"
+                                }
+                            ]
+                        }
+                    ],
+
+                    "scales": [
+                        {
+                            "name": "color",
+                            "type": "ordinal",
+                            "range": ["#000000", "#989898", "#818181"]
+                        }
+                    ],
+
+                    "marks": [
+                        {
+                            "type": "text",
+                            "from": {"data": "table"},
+                            "encode": {
+                                "enter": {
+                                    "text": {"field": "text"},
+                                    "align": {"value": "center"},
+                                    "baseline": {"value": "alphabetic"},
+                                    "fill": {"scale": "color", "field": "text"}
+                                },
+                                "update": {
+                                    "fillOpacity": {"value": 1},
+                                    "fill": {"value": "black"}
+                                },
+                                "hover": {
+                                    "fillOpacity": {"value": 0.5},
+                                    "fill": {"value": "grey"}
+
+                                }
+                            },
+                            "transform": [
+                                {
+                                    "type": "wordcloud",
+                                    "size": [600, 300],
+                                    "text": {"field": "text"},
+                                    "rotate": {"field": "datum.angle"},
+                                    "font": "Roboto",
+                                    "fontSize": {"field": "datum.count"},
+                                    "fontWeight": {"field": "datum.weight"},
+                                    "fontSizeRange": [12, 56],
+                                    "padding": 2
+                                }
+                            ]
+                        }
+                    ]
+                };
+
+                var opt = {
+                    mode: "vega-lite",
+                    actions: false
+                };
+                vega.embed("#wordCloud", vlSpec, opt, function (error, result) {
+                    var tooltipOption = {
+                        showAllFields: false,
+                        fields: [
+                            { field: "text", title: "Word" },
+                            { field: "count", title: "Occurences" }
+                        ]
+                    };
+                    vegaTooltip.vegaLite(result.view, vlSpec, tooltipOption);
                 });
-
             </script>
         </div>
 
